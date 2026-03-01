@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { img } from "@/lib/config";
 import { IconBaseball, IconGlove, IconBat, IconChart, IconVideo, IconTrophy, IconDiamond } from "@/components/BaseballIcons";
 
 const marqueeItems = [
@@ -25,12 +26,16 @@ export default function Home() {
     <main className="overflow-hidden page-reveal">
 
       {/* HERO */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center bg-[#080808] overflow-hidden">
-        <div className="absolute inset-0 grid-bg" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_60%,rgba(245,158,11,0.07)_0%,transparent_100%)]" />
-        <div className="absolute -top-60 -left-60 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-[140px]" />
-        <div className="absolute -bottom-60 -right-60 w-[500px] h-[500px] bg-amber-600/4 rounded-full blur-[140px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-[0.015] animate-spin-slow pointer-events-none">
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        {/* Real stadium photo — Wrigley Field at dusk */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('${img("/images/hero-wrigley.jpg")}')` }}
+        />
+        {/* Dark overlay — keeps text sharp */}
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/85 via-zinc-950/70 to-zinc-950/90" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_60%,rgba(245,158,11,0.08)_0%,transparent_100%)]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-[0.02] animate-spin-slow pointer-events-none">
           <svg viewBox="0 0 100 100" fill="white"><polygon points="50,2 98,50 50,98 2,50"/></svg>
         </div>
 
@@ -95,8 +100,13 @@ export default function Home() {
       </div>
 
       {/* TRAINING PLANS */}
-      <section className="relative py-24 px-6 bg-[#080808]">
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-amber-500/3 rounded-full blur-[150px]" />
+      <section className="relative py-24 px-6 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('${img("/images/hero-allstar.jpg")}')` }}
+        />
+        <div className="absolute inset-0 bg-zinc-950/88" />
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-amber-500/4 rounded-full blur-[150px]" />
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="font-display text-5xl sm:text-7xl text-white">TRAINING <span className="gradient-text">PLANS</span></h2>

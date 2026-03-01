@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { img } from "@/lib/config";
 
 const plans = ["Diamond Plan ($300)","Gold Plan ($275)","Single Session ($100)","Half Session ($50)","College Summer ($1,100)","Hitting Plans"];
 
@@ -9,7 +10,9 @@ export default function Contact() {
     <main className="pt-16 bg-[#080808]">
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 grid-bg opacity-20" />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-wrigley.jpg")}')` }} />
+        <div className="absolute inset-0 bg-zinc-950/87" />
+        <div className="absolute inset-0 grid-bg opacity-10" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(245,158,11,0.06)_0%,transparent_100%)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <span className="badge-amber mb-5 inline-flex">◆ REACH OUT</span>

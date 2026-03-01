@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { img } from "@/lib/config";
 import { IconBaseball, IconGlove, IconDiamond } from "@/components/BaseballIcons";
 
 export const metadata: Metadata = {
@@ -29,7 +30,8 @@ export default function About() {
     <main className="pt-16 bg-[#080808]">
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 grid-bg opacity-20" />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-allstar.jpg")}')` }} />
+        <div className="absolute inset-0 bg-zinc-950/85" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(245,158,11,0.06)_0%,transparent_100%)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <span className="badge-amber mb-5 inline-flex">◆ MEET THE TEAM</span>
