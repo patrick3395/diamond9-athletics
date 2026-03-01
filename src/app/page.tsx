@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IconBaseball, IconGlove, IconBat, IconChart, IconVideo, IconTrophy, IconDiamond } from "@/components/BaseballIcons";
 
 const marqueeItems = [
   "⚾ RAPSODO TRACKING",
@@ -21,7 +22,7 @@ const marqueeItems = [
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden page-reveal">
 
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col items-center justify-center bg-[#080808] overflow-hidden">
@@ -38,8 +39,8 @@ export default function Home() {
             <span className="text-amber-500 text-3xl">◆</span>
           </div>
           <h1 className="font-display leading-none mb-6">
-            <span className="animate-fade-in-up-delay block text-[clamp(4rem,15vw,11rem)] gradient-text-white">ELEVATE</span>
-            <span className="animate-fade-in-up-delay block text-[clamp(4rem,15vw,11rem)] gradient-text text-glow">YOUR GAME</span>
+            <span className="animate-fade-in-up-delay block text-5xl sm:text-8xl lg:text-[10rem] gradient-text-white">ELEVATE</span>
+            <span className="animate-fade-in-up-delay block text-5xl sm:text-8xl lg:text-[10rem] gradient-text text-glow">YOUR GAME</span>
           </h1>
           <p className="animate-fade-in-up-delay-2 text-zinc-400 text-base sm:text-lg mb-10">
             Rapsodo-powered training for serious athletes.
@@ -70,7 +71,14 @@ export default function Home() {
               { num: "Rapsodo", label: "TECHNOLOGY" },
             ].map((s, i) => (
               <div key={i} className="px-4 py-2 group">
-                <p className="font-display text-4xl sm:text-5xl gradient-text group-hover:text-glow transition-all">{s.num}</p>
+                <p className={`font-display gradient-text group-hover:text-glow transition-all ${s.num === "Rapsodo" ? "text-3xl sm:text-5xl" : "text-4xl sm:text-5xl"}`}>
+                  {s.num === "2" ? (
+                    <span className="flex items-center justify-center gap-2">
+                      {s.num}
+                      <IconDiamond className="w-5 h-5 text-amber-500 inline-block" />
+                    </span>
+                  ) : s.num}
+                </p>
                 <p className="text-zinc-500 text-[11px] tracking-widest mt-1">{s.label}</p>
               </div>
             ))}
@@ -104,6 +112,7 @@ export default function Home() {
                 <div className="absolute inset-0 grid-bg opacity-40" />
                 <div className="absolute -right-3 -bottom-3 font-display text-[150px] text-white/[0.03] leading-none select-none">01</div>
                 <div className="relative z-10 h-full flex flex-col justify-end p-8">
+                  <IconBaseball className="w-8 h-8 text-amber-400 mb-3" />
                   <h3 className="font-display text-4xl sm:text-5xl text-white mb-1">PITCHING PLANS</h3>
                   <p className="text-zinc-500 text-sm mb-4">From $50 — Rapsodo tracked</p>
                   <span className="flex items-center gap-2 text-amber-400 text-sm font-bold tracking-wider">
@@ -121,6 +130,7 @@ export default function Home() {
                 <div className="absolute inset-0 grid-bg opacity-20" />
                 <div className="absolute -right-3 -bottom-3 font-display text-[150px] text-white/[0.03] leading-none select-none">02</div>
                 <div className="relative z-10 h-full flex flex-col justify-end p-8">
+                  <IconBat className="w-8 h-8 text-zinc-500 mb-3" />
                   <h3 className="font-display text-4xl sm:text-5xl text-white mb-1">HITTING PLANS</h3>
                   <p className="text-zinc-500 text-sm mb-4">Coming soon — stay tuned</p>
                   <span className="flex items-center gap-2 text-zinc-500 text-sm font-bold tracking-wider">
@@ -150,13 +160,15 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { title: "Rapsodo Data", desc: "Velocity, spin & movement — every pitch." },
-                { title: "Video Analysis", desc: "Frame-by-frame mechanical breakdown." },
-                { title: "Arm Care", desc: "Longevity protocols built in." },
-                { title: "Proven Results", desc: "500+ athletes improved." },
+                { title: "Rapsodo Data", desc: "Velocity, spin & movement — every pitch.", icon: <IconChart className="w-6 h-6 text-amber-500" /> },
+                { title: "Video Analysis", desc: "Frame-by-frame mechanical breakdown.", icon: <IconVideo className="w-6 h-6 text-amber-500" /> },
+                { title: "Arm Care", desc: "Longevity protocols built in.", icon: <IconGlove className="w-6 h-6 text-amber-500" /> },
+                { title: "Proven Results", desc: "500+ athletes improved.", icon: <IconTrophy className="w-6 h-6 text-amber-500" /> },
               ].map((f, i) => (
                 <div key={i} className="glass rounded-sm p-5 card-lift group">
-                  <div className="w-1 h-5 bg-amber-500 rounded-full mb-3 group-hover:h-7 transition-all duration-300" />
+                  <div className="w-10 h-10 rounded-sm glass-amber flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {f.icon}
+                  </div>
                   <h3 className="text-white font-bold text-sm mb-1">{f.title}</h3>
                   <p className="text-zinc-600 text-xs leading-relaxed">{f.desc}</p>
                 </div>

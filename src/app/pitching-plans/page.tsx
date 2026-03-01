@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { IconDiamond, IconBaseball, IconGlove, IconBat, IconField } from "@/components/BaseballIcons";
 
 export const metadata: Metadata = {
   title: "Pitching Plans | Diamond Nine Athletics",
@@ -79,6 +80,13 @@ const collegePlan = {
   ],
 };
 
+const planIcons: Record<string, React.ReactNode> = {
+  "DIAMOND PLAN": <IconDiamond className="w-5 h-5 text-amber-500" />,
+  "GOLD PLAN": <IconBaseball className="w-5 h-5 text-amber-500" />,
+  "SINGLE SESSION": <IconGlove className="w-5 h-5 text-amber-500" />,
+  "HALF SESSION": <IconBat className="w-5 h-5 text-amber-500" />,
+};
+
 export default function PitchingPlans() {
   return (
     <main className="pt-16">
@@ -116,7 +124,10 @@ export default function PitchingPlans() {
                 {plan.tag}
               </span>
 
-              <h3 className="font-display text-2xl text-white mb-2">{plan.name}</h3>
+              <div className="flex items-center gap-2 mb-2">
+                {planIcons[plan.name]}
+                <h3 className="font-display text-2xl text-white">{plan.name}</h3>
+              </div>
               <p className="gradient-text font-black text-4xl mb-6">{plan.price}</p>
 
               <ul className="space-y-3 flex-1 mb-6">
@@ -149,8 +160,11 @@ export default function PitchingPlans() {
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent" />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             <div className="p-8 sm:p-12">
-              <span className="section-label">SUMMER PROGRAM</span>
-              <h2 className="font-display text-4xl sm:text-5xl text-white mt-3 mb-2">
+              <div className="flex items-center gap-2 mb-1">
+                <IconField className="w-6 h-6 text-amber-500" />
+                <span className="section-label">SUMMER PROGRAM</span>
+              </div>
+              <h2 className="font-display text-4xl sm:text-5xl text-white mt-2 mb-2">
                 {collegePlan.name}
               </h2>
               <p className="gradient-text font-black text-5xl mb-6">{collegePlan.price}</p>

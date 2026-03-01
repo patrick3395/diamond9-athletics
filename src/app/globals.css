@@ -244,3 +244,139 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
+
+/* Light mode overrides */
+[data-theme="light"] {
+  --bg-primary: #f8f8f5;
+  --bg-secondary: #f0ede6;
+  --bg-card: #ffffff;
+}
+
+[data-theme="light"] body {
+  background: #f5f3ee;
+  color: #111111;
+}
+
+[data-theme="light"] .glass {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+[data-theme="light"] .glass-amber {
+  background: rgba(245,158,11,0.06);
+  border: 1px solid rgba(245,158,11,0.2);
+}
+
+[data-theme="light"] .gradient-text-white {
+  background: linear-gradient(135deg, #111 0%, #333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] section {
+  background-color: #f5f3ee !important;
+}
+
+[data-theme="light"] .bg-\[#080808\],
+[data-theme="light"] .bg-\[#0a0a0a\],
+[data-theme="light"] .bg-\[#0d0d0d\] {
+  background-color: #f5f3ee !important;
+}
+
+[data-theme="light"] nav {
+  background: rgba(245,243,238,0.92) !important;
+  border-color: rgba(0,0,0,0.08) !important;
+}
+
+[data-theme="light"] .text-zinc-400,
+[data-theme="light"] .text-zinc-500,
+[data-theme="light"] .text-zinc-600 {
+  color: #555555 !important;
+}
+
+[data-theme="light"] .text-white {
+  color: #111111 !important;
+}
+
+[data-theme="light"] .border-zinc-800\/50,
+[data-theme="light"] .border-zinc-800 {
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+[data-theme="light"] .grid-bg {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+[data-theme="light"] .divider-glow {
+  background: linear-gradient(90deg, transparent, rgba(245,158,11,0.6), transparent);
+}
+
+[data-theme="light"] .btn-outline {
+  border-color: rgba(0,0,0,0.2);
+  color: #111;
+}
+
+[data-theme="light"] .btn-outline:hover {
+  border-color: rgba(245,158,11,0.6);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track { background: #f5f3ee; }
+[data-theme="light"] ::-webkit-scrollbar-thumb { background: #d4d4d4; }
+
+/* Baseball button ripple effect */
+@keyframes baseball-spin {
+  from { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(90deg) scale(1.1); }
+  to { transform: rotate(360deg) scale(1); }
+}
+
+/* Page transition: baseball seam sweep */
+@keyframes seam-sweep {
+  0% { clip-path: circle(0% at 50% 50%); opacity: 1; }
+  100% { clip-path: circle(150% at 50% 50%); opacity: 1; }
+}
+
+/* Bounce-in for cards */
+@keyframes bounce-in {
+  0% { transform: translateY(40px) scale(0.95); opacity: 0; }
+  60% { transform: translateY(-6px) scale(1.02); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* Stitch draw animation for decorative lines */
+@keyframes stitch-draw {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Button: baseball spin on active/click */
+.btn-gold:active, .btn-outline:active {
+  animation: baseball-spin 0.4s ease;
+}
+
+/* Spinning baseball loader */
+@keyframes spin-baseball {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.baseball-loader {
+  display: inline-block;
+  animation: spin-baseball 0.8s linear infinite;
+}
+
+/* Page load reveal */
+@keyframes page-reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-reveal {
+  animation: page-reveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

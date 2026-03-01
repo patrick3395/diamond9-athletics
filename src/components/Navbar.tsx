@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "./ThemeToggle";
 
-export const BUILD_VERSION = "v1.1.0";
+export const BUILD_VERSION = "v1.2.0";
 
 const navLinks = [
   { href: "/pitching-plans", label: "Pitching Plans" },
@@ -56,8 +57,9 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Book Now Button */}
-            <div className="hidden md:block">
+            {/* Theme Toggle + Book Now */}
+            <div className="hidden md:flex items-center gap-4">
+              <ThemeToggle />
               <Link
                 href="/appointments"
                 className="btn-gold px-6 py-2.5 rounded-full text-sm tracking-wider inline-block"
@@ -100,6 +102,10 @@ export default function Navbar() {
           }`}
         >
           <div className="px-4 pb-4 pt-2 space-y-1 bg-zinc-950/95 border-t border-zinc-800/50">
+            <div className="flex items-center justify-between px-4 py-2 mb-1">
+              <span className="text-zinc-500 text-xs tracking-wider">THEME</span>
+              <ThemeToggle />
+            </div>
             {navLinks.map((link) => (
               <Link
                 key={link.href}

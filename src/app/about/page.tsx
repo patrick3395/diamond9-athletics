@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { IconBaseball, IconGlove, IconDiamond } from "@/components/BaseballIcons";
 
 export const metadata: Metadata = {
   title: "About | Diamond Nine Athletics",
@@ -54,9 +55,11 @@ export default function About() {
               className="glass rounded-sm overflow-hidden card-lift"
             >
               <div className="h-[300px] bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center">
-                <svg className="w-16 h-16 text-amber-500/40" viewBox="0 0 100 100" fill="currentColor">
-                  <polygon points="50,5 95,50 50,95 5,50" />
-                </svg>
+                {coach.name === "Wes Gafford" ? (
+                  <IconBaseball className="w-16 h-16 text-amber-500/40" />
+                ) : (
+                  <IconGlove className="w-16 h-16 text-amber-500/40" />
+                )}
               </div>
 
               <div className="p-8">
@@ -85,6 +88,7 @@ export default function About() {
       <section className="py-20 bg-[#0a0a0a]">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <div className="glass-amber rounded-sm p-10 sm:p-14">
+            <IconDiamond className="w-8 h-8 text-amber-500/60 mx-auto mb-4" />
             <span className="font-display text-6xl gradient-text leading-none block mb-6">&ldquo;</span>
             <p className="text-zinc-300 text-lg leading-relaxed">
               Elite-level training powered by cutting-edge technology — for every athlete ready to compete.
