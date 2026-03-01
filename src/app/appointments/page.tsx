@@ -13,7 +13,7 @@ export default function Appointments() {
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/batting-cages.jpg")}')` }} />
-        <div className="absolute inset-0 bg-zinc-950/85" />
+        <div className="absolute inset-0 bg-zinc-950/58" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(245,158,11,0.06)_0%,transparent_100%)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <span className="badge-amber mb-5 inline-flex">◆ GET STARTED</span>

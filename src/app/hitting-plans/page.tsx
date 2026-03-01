@@ -14,7 +14,7 @@ export default function HittingPlans() {
     <main className="pt-16 bg-[#080808]">
       <section className="relative min-h-[80vh] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-fenway.jpg")}')` }} />
-        <div className="absolute inset-0 bg-zinc-950/88" />
+        <div className="absolute inset-0 bg-zinc-950/62" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(245,158,11,0.06)_0%,transparent_100%)]" />
         <div className="relative z-10 text-center px-6 max-w-2xl mx-auto">
           <div className="w-16 h-16 rounded-2xl card-modern-amber flex items-center justify-center mx-auto mb-8">

@@ -33,7 +33,7 @@ export default function Home() {
           style={{ backgroundImage: `url('${img("/images/hero-wrigley.jpg")}')` }}
         />
         {/* Dark overlay — keeps text sharp */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/85 via-zinc-950/70 to-zinc-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/70 via-zinc-950/50 to-zinc-950/80" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_60%,rgba(245,158,11,0.08)_0%,transparent_100%)]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-[0.02] animate-spin-slow pointer-events-none">
           <svg viewBox="0 0 100 100" fill="white"><polygon points="50,2 98,50 50,98 2,50"/></svg>
@@ -105,7 +105,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url('${img("/images/hero-allstar.jpg")}')` }}
         />
-        <div className="absolute inset-0 bg-zinc-950/88" />
+        <div className="absolute inset-0 bg-zinc-950/62" />
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-amber-500/4 rounded-full blur-[150px]" />
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
