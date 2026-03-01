@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 
-export const BUILD_VERSION = "v1.2.0";
+export const BUILD_VERSION = "v1.3.0";
 
 const navLinks = [
   { href: "/pitching-plans", label: "Pitching Plans" },

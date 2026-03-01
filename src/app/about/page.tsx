@@ -1,83 +1,70 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { IconBaseball, IconGlove, IconDiamond } from "@/components/BaseballIcons";
 
 export const metadata: Metadata = {
   title: "About | Diamond Nine Athletics",
-  description:
-    "Meet the elite coaching staff at Diamond Nine Athletics.",
+  description: "Meet the elite coaches behind Diamond Nine Athletics.",
 };
 
 const coaches = [
   {
-    name: "Wes Gafford",
-    role: "Head Pitching Coach",
-    bio: "Elite mechanics and arm health specialist. Hundreds of athletes developed at the high school and college level with measurable velocity gains.",
-    specialties: [
-      "Biomechanical analysis",
-      "Velocity development",
-      "Arm health & prevention",
-      "Recruiting preparation",
-    ],
+    name: "WES GAFFORD",
+    title: "HEAD PITCHING COACH",
+    bio: "Rapsodo-certified pitching specialist with a data-first approach to velocity and command development.",
+    specialties: ["Rapsodo Analytics", "Velocity Development", "Arm Health", "Recruiting Preparation"],
+    icon: <IconBaseball className="w-12 h-12 text-amber-400/40" />,
   },
   {
-    name: "Turner Olson",
-    role: "Pitching Coach",
-    bio: "Rapsodo data and pitch design expert. Turns raw numbers into elite arsenals that get athletes recruited.",
-    specialties: [
-      "Rapsodo data analysis",
-      "Spin efficiency optimization",
-      "Movement profile development",
-      "Video analysis",
-    ],
+    name: "TURNER OLSON",
+    title: "PITCHING COACH",
+    bio: "Mechanical precision coach focused on repeatable delivery and long-term arm longevity.",
+    specialties: ["Mechanical Analysis", "Weighted Ball Programs", "Live At-Bats", "Video Breakdown"],
+    icon: <IconGlove className="w-12 h-12 text-amber-400/40" />,
   },
 ];
 
 export default function About() {
   return (
-    <main className="pt-16">
+    <main className="pt-16 bg-[#080808]">
       {/* Hero */}
-      <section className="relative bg-[#080808] py-24 overflow-hidden">
-        <div className="absolute inset-0 grid-bg opacity-30" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-          <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl mb-4">
-            <span className="gradient-text">COACHES</span>
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 grid-bg opacity-20" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(245,158,11,0.06)_0%,transparent_100%)]" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+          <span className="badge-amber mb-5 inline-flex">◆ MEET THE TEAM</span>
+          <h1 className="font-display text-6xl sm:text-8xl lg:text-9xl leading-none">
+            <span className="text-white">THE</span>
+            <span className="block gradient-text">COACHES</span>
           </h1>
+          <div className="divider-glow max-w-[100px] mx-auto mt-5" />
         </div>
       </section>
 
       {/* Coaches */}
-      <section className="max-w-6xl mx-auto px-4 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {coaches.map((coach) => (
-            <div
-              key={coach.name}
-              className="glass rounded-sm overflow-hidden card-lift"
-            >
-              <div className="h-[300px] bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center">
-                {coach.name === "Wes Gafford" ? (
-                  <IconBaseball className="w-16 h-16 text-amber-500/40" />
-                ) : (
-                  <IconGlove className="w-16 h-16 text-amber-500/40" />
-                )}
+      <section className="max-w-5xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {coaches.map((coach, i) => (
+            <div key={i} className="card-modern rounded-2xl overflow-hidden card-lift">
+              {/* Photo placeholder */}
+              <div className="relative h-64 bg-gradient-to-br from-zinc-800/60 to-zinc-900 flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 grid-bg opacity-20" />
+                <div className="relative z-10 flex flex-col items-center gap-3">
+                  {coach.icon}
+                  <span className="text-zinc-600 text-xs tracking-[0.2em]">PHOTO COMING SOON</span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-zinc-950/80 to-transparent" />
               </div>
-
-              <div className="p-8">
-                <h3 className="font-display text-4xl text-white mb-1">{coach.name}</h3>
-                <p className="text-amber-400 tracking-wider text-sm font-medium mb-4">
-                  {coach.role.toUpperCase()}
-                </p>
-                <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-                  {coach.bio}
-                </p>
-                <ul className="space-y-2">
-                  {coach.specialties.map((specialty) => (
-                    <li key={specialty} className="flex items-center gap-2 text-zinc-300 text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
-                      {specialty}
-                    </li>
+              {/* Info */}
+              <div className="p-7">
+                <p className="section-label mb-1">{coach.title}</p>
+                <h2 className="font-display text-3xl text-white mb-3">{coach.name}</h2>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-5">{coach.bio}</p>
+                <div className="flex flex-wrap gap-2">
+                  {coach.specialties.map((s, j) => (
+                    <span key={j} className="text-[10px] text-amber-500/70 bg-amber-500/8 border border-amber-500/15 px-3 py-1 rounded-full tracking-wide">{s}</span>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
           ))}
@@ -85,16 +72,14 @@ export default function About() {
       </section>
 
       {/* Mission */}
-      <section className="py-20 bg-[#0a0a0a]">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <div className="glass-amber rounded-sm p-10 sm:p-14">
-            <IconDiamond className="w-8 h-8 text-amber-500/60 mx-auto mb-4" />
-            <span className="font-display text-6xl gradient-text leading-none block mb-6">&ldquo;</span>
-            <p className="text-zinc-300 text-lg leading-relaxed">
-              Elite-level training powered by cutting-edge technology — for every athlete ready to compete.
-            </p>
-          </div>
-          <div className="divider-glow mt-12" />
+      <section className="max-w-3xl mx-auto px-6 pb-24 text-center">
+        <div className="card-modern-amber rounded-2xl p-10 relative overflow-hidden">
+          <div className="h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent absolute top-0 left-8 right-8" />
+          <IconDiamond className="w-8 h-8 text-amber-500/40 mx-auto mb-5" />
+          <p className="text-white text-lg sm:text-xl font-medium leading-relaxed">
+            &ldquo;Data-driven training. Elite instruction. Every athlete leaves better than they arrived.&rdquo;
+          </p>
+          <div className="divider-glow max-w-[80px] mx-auto mt-7" />
         </div>
       </section>
     </main>

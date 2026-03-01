@@ -35,11 +35,9 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <div className="animate-fade-in-up mb-8">
-            <span className="text-amber-500 text-3xl">◆</span>
-          </div>
           <h1 className="font-display leading-none mb-6">
-            <span className="animate-fade-in-up-delay block text-5xl sm:text-8xl lg:text-[10rem] gradient-text-white">ELEVATE</span>
+            <span className="animate-fade-in-up block text-5xl sm:text-8xl lg:text-[10rem] gradient-text-white">ELEVATE</span>
+            <div className="divider-glow max-w-[80px] mx-auto my-2 animate-fade-in-up-delay" />
             <span className="animate-fade-in-up-delay block text-5xl sm:text-8xl lg:text-[10rem] gradient-text text-glow">YOUR GAME</span>
           </h1>
           <p className="animate-fade-in-up-delay-2 text-zinc-400 text-base sm:text-lg mb-10">
@@ -55,14 +53,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 scroll-bounce">
           <span className="text-zinc-700 text-[10px] tracking-[0.3em]">SCROLL</span>
           <div className="w-px h-6 bg-gradient-to-b from-zinc-700 to-transparent" />
         </div>
       </section>
 
       {/* STATS */}
-      <section className="relative bg-[#0d0d0d] border-y border-zinc-800/50">
+      <section className="relative bg-[#0d0d0d] border-y border-zinc-800/50 rounded-2xl overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-10">
           <div className="grid grid-cols-3 divide-x divide-zinc-800/50 text-center">
             {[
@@ -107,7 +105,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             <Link href="/pitching-plans" className="group card-lift">
-              <div className="relative h-64 sm:h-80 rounded-sm overflow-hidden glass-amber border border-amber-500/10">
+              <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden card-modern-amber border border-amber-500/10">
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/8 to-zinc-950" />
                 <div className="absolute inset-0 grid-bg opacity-40" />
                 <div className="absolute -right-3 -bottom-3 font-display text-[150px] text-white/[0.03] leading-none select-none">01</div>
@@ -125,7 +123,7 @@ export default function Home() {
             </Link>
 
             <Link href="/hitting-plans" className="group card-lift">
-              <div className="relative h-64 sm:h-80 rounded-sm overflow-hidden glass border border-zinc-800/50">
+              <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden card-modern border border-zinc-800/50">
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/50 to-zinc-950" />
                 <div className="absolute inset-0 grid-bg opacity-20" />
                 <div className="absolute -right-3 -bottom-3 font-display text-[150px] text-white/[0.03] leading-none select-none">02</div>
@@ -165,8 +163,8 @@ export default function Home() {
                 { title: "Arm Care", desc: "Longevity protocols built in.", icon: <IconGlove className="w-6 h-6 text-amber-500" /> },
                 { title: "Proven Results", desc: "500+ athletes improved.", icon: <IconTrophy className="w-6 h-6 text-amber-500" /> },
               ].map((f, i) => (
-                <div key={i} className="glass rounded-sm p-5 card-lift group">
-                  <div className="w-10 h-10 rounded-sm glass-amber flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                <div key={i} className="card-modern rounded-2xl p-5 card-lift group">
+                  <div className="icon-box mb-3 group-hover:scale-110 transition-transform duration-300">
                     {f.icon}
                   </div>
                   <h3 className="text-white font-bold text-sm mb-1">{f.title}</h3>
@@ -203,7 +201,7 @@ export default function Home() {
                 featured: false,
               },
             ].map((plan, i) => (
-              <div key={i} className={`rounded-sm overflow-hidden card-lift ${plan.featured ? "glass-amber border border-amber-500/20" : "glass border border-zinc-800/50"}`}>
+              <div key={i} className={`rounded-2xl overflow-hidden card-lift ${plan.featured ? "card-modern-amber border border-amber-500/20" : "card-modern border border-zinc-800/50"}`}>
                 {plan.featured && <div className="h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent" />}
                 <div className="p-8">
                   <p className="section-label mb-2">{plan.tier} PROGRAM</p>
