@@ -157,19 +157,14 @@ export default function Home() {
               <div className="relative h-72 sm:h-96 rounded-2xl overflow-hidden card-modern-amber stripe-card">
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/12 via-zinc-950/80 to-zinc-950" />
                 <div className="absolute -right-4 -bottom-4 font-display text-[160px] text-amber-500/5 leading-none select-none">01</div>
-                {/* Live indicator */}
-                <div className="absolute top-5 left-5 flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-                  <span className="text-[10px] text-amber-400 font-bold tracking-[0.2em]">ACTIVE</span>
-                </div>
                 <div className="relative z-10 h-full flex flex-col justify-end p-8">
-                  <div className="flex items-center gap-3 mb-3">
-                    <IconBaseball className="w-7 h-7 text-amber-400" />
-                    <div className="flex gap-1.5 flex-wrap">
-                      <span className="pitch-tag pitch-tag-fb">4-Seam</span>
-                      <span className="pitch-tag pitch-tag-sl">Slider</span>
-                      <span className="pitch-tag pitch-tag-cb">Curve</span>
-                    </div>
+                  <div className="flex items-center gap-2 mb-3 flex-wrap">
+                    <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse shrink-0" />
+                    <span className="text-[10px] text-amber-400 font-bold tracking-[0.2em] shrink-0">ACTIVE</span>
+                    <IconBaseball className="w-5 h-5 text-amber-400 shrink-0" />
+                    <span className="pitch-tag pitch-tag-fb">4-Seam</span>
+                    <span className="pitch-tag pitch-tag-sl">Slider</span>
+                    <span className="pitch-tag pitch-tag-cb">Curve</span>
                   </div>
                   <h3 className="font-display text-5xl sm:text-6xl text-white mb-1">PITCHING</h3>
                   <h3 className="font-display text-5xl sm:text-6xl gradient-text leading-tight mb-3">PLANS</h3>
@@ -188,18 +183,13 @@ export default function Home() {
               <div className="relative h-72 sm:h-96 rounded-2xl overflow-hidden card-modern">
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/30 via-zinc-950/80 to-zinc-950" />
                 <div className="absolute -right-4 -bottom-4 font-display text-[160px] text-white/[0.03] leading-none select-none">02</div>
-                {/* Coming soon badge */}
-                <div className="absolute top-5 left-5 flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-zinc-600" />
-                  <span className="text-[10px] text-zinc-500 font-bold tracking-[0.2em]">COMING SOON</span>
-                </div>
                 <div className="relative z-10 h-full flex flex-col justify-end p-8">
-                  <div className="flex items-center gap-3 mb-3">
-                    <IconBat className="w-7 h-7 text-zinc-500" />
-                    <div className="flex gap-1.5 flex-wrap">
-                      <span className="pitch-tag pitch-tag-ch">Launch Angle</span>
-                      <span className="pitch-tag pitch-tag-fb">Exit Velo</span>
-                    </div>
+                  <div className="flex items-center gap-2 mb-3 flex-wrap">
+                    <span className="w-2 h-2 rounded-full bg-zinc-600 shrink-0" />
+                    <span className="text-[10px] text-zinc-500 font-bold tracking-[0.2em] shrink-0">COMING SOON</span>
+                    <IconBat className="w-5 h-5 text-zinc-500 shrink-0" />
+                    <span className="pitch-tag pitch-tag-ch">Launch Angle</span>
+                    <span className="pitch-tag pitch-tag-fb">Exit Velo</span>
                   </div>
                   <h3 className="font-display text-5xl sm:text-6xl text-white mb-1">HITTING</h3>
                   <h3 className="font-display text-5xl sm:text-6xl text-zinc-600 leading-tight mb-3">PLANS</h3>
