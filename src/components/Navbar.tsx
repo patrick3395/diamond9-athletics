@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export const BUILD_VERSION = "v1.0.2";
+export const BUILD_VERSION = "v1.1.0";
 
 const navLinks = [
   { href: "/pitching-plans", label: "Pitching Plans" },
@@ -34,7 +34,7 @@ export default function Navbar() {
               <span className="font-display text-xl text-white">
                 DIAMOND NINE
               </span>
-              <span className="hidden sm:inline-block text-[10px] font-mono text-zinc-600 border border-zinc-800 rounded px-1.5 py-0.5 ml-1 select-none">
+              <span className="inline-block text-[10px] font-mono text-zinc-500 border border-zinc-800 rounded px-1.5 py-0.5 ml-1 select-none">
                 {BUILD_VERSION}
               </span>
             </Link>
@@ -60,7 +60,7 @@ export default function Navbar() {
             <div className="hidden md:block">
               <Link
                 href="/appointments"
-                className="btn-gold px-6 py-2.5 rounded-sm text-sm tracking-wider inline-block"
+                className="btn-gold px-6 py-2.5 rounded-full text-sm tracking-wider inline-block"
               >
                 BOOK NOW
               </Link>
@@ -117,7 +117,7 @@ export default function Navbar() {
             <Link
               href="/appointments"
               onClick={() => setIsOpen(false)}
-              className="block mt-2 btn-gold px-4 py-3 rounded-sm text-sm tracking-wider text-center"
+              className="block mt-2 btn-gold px-4 py-3 rounded-full text-sm tracking-wider text-center"
             >
               BOOK NOW
             </Link>

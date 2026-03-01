@@ -66,8 +66,6 @@ const plans = [
 const collegePlan = {
   name: "COLLEGE SUMMER PROGRAM",
   price: "$1,100",
-  description:
-    "Comprehensive summer training designed for college athletes. Full A/B/Recovery system with complete workload management, live at-bats, and elite-level Rapsodo tracking throughout the program.",
   features: [
     "A/B/Recovery System",
     "Long Toss Plan",
@@ -88,14 +86,9 @@ export default function PitchingPlans() {
       <section className="relative bg-[#080808] py-24 overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-30" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-          <span className="section-label">TRAIN WITH THE BEST</span>
-          <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl mt-4 mb-4">
+          <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl mb-4">
             PITCHING <span className="gradient-text">PLANS</span>
           </h1>
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
-            Choose the plan that fits your goals. Every plan includes access to
-            our elite coaching staff and cutting-edge technology.
-          </p>
         </div>
       </section>
 
@@ -111,7 +104,6 @@ export default function PitchingPlans() {
                   : "glass"
               }`}
             >
-              {/* Top glow on featured */}
               {plan.featured && (
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent" />
               )}
@@ -140,7 +132,7 @@ export default function PitchingPlans() {
 
               <Link
                 href="/appointments"
-                className={`text-center py-3 rounded-sm text-sm tracking-wider block ${
+                className={`text-center py-3 rounded-full text-sm tracking-wider block ${
                   plan.featured ? "btn-gold" : "btn-outline"
                 }`}
               >
@@ -156,25 +148,20 @@ export default function PitchingPlans() {
         <div className="glass border border-amber-500/20 rounded-sm overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent" />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            {/* Left */}
             <div className="p-8 sm:p-12">
               <span className="section-label">SUMMER PROGRAM</span>
               <h2 className="font-display text-4xl sm:text-5xl text-white mt-3 mb-2">
                 {collegePlan.name}
               </h2>
-              <p className="gradient-text font-black text-5xl mb-4">{collegePlan.price}</p>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-8 max-w-md">
-                {collegePlan.description}
-              </p>
+              <p className="gradient-text font-black text-5xl mb-6">{collegePlan.price}</p>
               <Link
                 href="/appointments"
-                className="btn-gold px-10 py-4 rounded-sm text-sm tracking-wider inline-block text-center"
+                className="btn-gold px-10 py-4 rounded-full text-sm tracking-wider inline-block text-center"
               >
                 ENROLL NOW
               </Link>
             </div>
 
-            {/* Right - checklist grid */}
             <div className="p-8 sm:p-12 bg-white/[0.02] flex items-center">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
                 {collegePlan.features.map((feature) => (
@@ -193,15 +180,12 @@ export default function PitchingPlans() {
 
       {/* Bottom CTA */}
       <section className="py-16 text-center px-4 bg-[#0a0a0a]">
-        <p className="font-display text-3xl text-white mb-4">NOT SURE WHICH PLAN?</p>
-        <p className="text-zinc-400 mb-6">
-          We&apos;ll help you find the perfect training package for your goals.
-        </p>
+        <p className="font-display text-3xl text-white mb-6">QUESTIONS?</p>
         <Link
           href="/contact"
-          className="btn-outline px-8 py-3 rounded-sm text-sm tracking-wider inline-block"
+          className="btn-outline px-8 py-3 rounded-full text-sm tracking-wider inline-block"
         >
-          CONTACT US FOR A FREE CONSULTATION
+          CONTACT US
         </Link>
       </section>
     </main>
