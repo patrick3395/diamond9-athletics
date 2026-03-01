@@ -20,7 +20,7 @@ const coaches = [
       { label: "AVG GAIN", value: "+4 MPH" },
     ],
     icon: <IconBaseball className="w-10 h-10 text-amber-400" />,
-    pitchFocus: ["4-Seam", "Slider", "Curveball"],
+    pitchFocus: ["4-Seam", "Slider", "Curve"],
   },
   {
     name: "TURNER OLSON",
@@ -38,10 +38,10 @@ const coaches = [
 ];
 
 const pillars = [
-  { icon: <IconChart className="w-5 h-5 text-amber-500" />, title: "DATA FIRST",      desc: "Every session logged with Rapsodo. Numbers don't lie." },
-  { icon: <IconVideo className="w-5 h-5 text-amber-500" />, title: "VIDEO ANALYSIS",  desc: "Frame-by-frame breakdowns to fix mechanics at the source." },
-  { icon: <IconGlove className="w-5 h-5 text-amber-500" />, title: "ARM LONGEVITY",   desc: "Train hard without destroying your arm. That's the protocol." },
-  { icon: <IconDiamond className="w-5 h-5 text-amber-500" />, title: "REAL RESULTS",  desc: "500+ athletes improved. Average +4–6 mph velocity gain." },
+  { icon: <IconChart className="w-5 h-5 text-amber-500" />, title: "DATA FIRST",     desc: "Every session logged with Rapsodo." },
+  { icon: <IconVideo className="w-5 h-5 text-amber-500" />, title: "VIDEO",          desc: "Frame-by-frame mechanical breakdowns." },
+  { icon: <IconGlove className="w-5 h-5 text-amber-500" />, title: "ARM LONGEVITY", desc: "Train hard. Protect your arm." },
+  { icon: <IconDiamond className="w-5 h-5 text-amber-500" />, title: "RESULTS",     desc: "500+ athletes. Avg +4–6 mph gain." },
 ];
 
 export default function About() {
@@ -65,45 +65,49 @@ export default function About() {
       </section>
 
       {/* ── Coach Cards ──────────────────────────────────────── */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {coaches.map((coach, i) => (
             <div key={i} className="card-modern rounded-2xl overflow-hidden card-lift group">
 
-              {/* Photo panel — dark with jersey number & accent */}
-              <div className="relative h-64 bg-gradient-to-br from-zinc-900 to-[#0a0a0a] flex items-end overflow-hidden">
+              {/* Photo panel */}
+              <div className="relative h-56 bg-gradient-to-br from-zinc-900 to-[#0a0a0a] overflow-hidden">
                 {/* Diagonal corner accent */}
                 <div className="coach-accent" />
-                {/* Grid pattern */}
+                {/* Grid */}
                 <div className="absolute inset-0 grid-bg opacity-15" />
-                {/* Giant jersey number watermark */}
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 font-display text-[10rem] leading-none text-white/[0.04] select-none pointer-events-none">
+                {/* Jersey watermark */}
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 font-display text-[8rem] leading-none text-white/[0.04] select-none pointer-events-none">
                   #{coach.jersey}
                 </div>
-                {/* Center icon */}
+                {/* Icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-20 h-20 rounded-2xl bg-amber-500/8 border border-amber-500/15 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {coach.icon}
                   </div>
                 </div>
-                {/* Stats overlay at bottom */}
-                <div className="relative z-10 w-full p-4 bg-gradient-to-t from-zinc-950 to-transparent flex items-center gap-3 flex-wrap">
-                  {coach.stats.map((s, j) => (
-                    <div key={j} className="scoreboard-panel rounded-lg px-3 py-1.5">
-                      <p className="scoreboard-num text-base">{s.value}</p>
-                      <p className="scoreboard-label text-[9px]">{s.label}</p>
+                {/* Stats row — fixed: no ml-auto, clean two-column layout */}
+                <div className="absolute bottom-0 left-0 right-0 px-4 py-3 bg-gradient-to-t from-zinc-950 to-transparent">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      {coach.stats.map((s, j) => (
+                        <div key={j} className="scoreboard-panel rounded-lg px-2.5 py-1.5">
+                          <p className="scoreboard-num text-sm">{s.value}</p>
+                          <p className="scoreboard-label text-[8px]">{s.label}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                  <div className="flex flex-wrap gap-1.5 ml-auto">
-                    {coach.pitchFocus.map((p, j) => (
-                      <span key={j} className={`pitch-tag ${j===0 ? "pitch-tag-fb" : j===1 ? "pitch-tag-sl" : "pitch-tag-cb"}`}>{p}</span>
-                    ))}
+                    <div className="flex flex-wrap justify-end gap-1 max-w-[50%]">
+                      {coach.pitchFocus.map((p, j) => (
+                        <span key={j} className={`pitch-tag ${j===0 ? "pitch-tag-fb" : j===1 ? "pitch-tag-sl" : "pitch-tag-cb"}`}>{p}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Info */}
-              <div className="p-7">
+              <div className="p-5 sm:p-7">
                 <p className="section-label mb-1">{coach.title}</p>
                 <h2 className="font-display text-3xl text-white mb-3">{coach.name}</h2>
                 <p className="text-zinc-400 text-sm leading-relaxed mb-5">{coach.bio}</p>
@@ -119,18 +123,18 @@ export default function About() {
       </section>
 
       {/* ── Pillars ──────────────────────────────────────────── */}
-      <section className="py-16 px-6 bg-[#070707] border-t border-zinc-800/40">
+      <section className="py-16 px-4 sm:px-6 bg-[#070707] border-t border-zinc-800/40">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="section-label mb-3">OUR APPROACH</p>
             <h2 className="font-display text-4xl sm:text-5xl text-white">THE <span className="gradient-text">PHILOSOPHY</span></h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             {pillars.map((p, i) => (
-              <div key={i} className="card-modern rounded-2xl p-5 card-lift group text-center">
-                <div className="icon-box mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">{p.icon}</div>
-                <h3 className="font-display text-lg text-white mb-2">{p.title}</h3>
-                <p className="text-zinc-600 text-xs leading-relaxed">{p.desc}</p>
+              <div key={i} className="card-modern rounded-2xl p-4 sm:p-5 card-lift group text-center">
+                <div className="icon-box mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">{p.icon}</div>
+                <h3 className="font-display text-base sm:text-lg text-white mb-1.5">{p.title}</h3>
+                <p className="text-zinc-600 text-[11px] leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>
@@ -138,16 +142,16 @@ export default function About() {
       </section>
 
       {/* ── Mission quote ────────────────────────────────────── */}
-      <section className="max-w-3xl mx-auto px-6 py-24 text-center">
-        <div className="card-modern-amber rounded-2xl p-10 sm:p-14 relative overflow-hidden">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-20">
+        <div className="card-modern-amber rounded-2xl p-8 sm:p-14 relative overflow-hidden">
           <div className="h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent absolute top-0 left-8 right-8" />
           <div className="absolute inset-0 stripe-card" />
           <IconDiamond className="w-8 h-8 text-amber-500/40 mx-auto mb-5 relative z-10" />
-          <p className="font-display text-xl sm:text-2xl text-white leading-relaxed relative z-10">
+          <p className="font-display text-xl sm:text-2xl text-white leading-relaxed relative z-10 text-center">
             &ldquo;DATA-DRIVEN TRAINING. ELITE INSTRUCTION. EVERY ATHLETE LEAVES BETTER THAN THEY ARRIVED.&rdquo;
           </p>
           <div className="divider-glow max-w-[80px] mx-auto mt-7 relative z-10" />
-          <div className="mt-8 relative z-10">
+          <div className="mt-8 relative z-10 text-center">
             <Link href="/appointments" className="btn-gold px-8 py-3.5 rounded-full text-sm tracking-widest font-black inline-block">
               BOOK A SESSION
             </Link>
