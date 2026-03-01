@@ -53,33 +53,32 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 scroll-bounce">
-          <span className="text-zinc-700 text-[10px] tracking-[0.3em]">SCROLL</span>
-          <div className="w-px h-6 bg-gradient-to-b from-zinc-700 to-transparent" />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center scroll-bounce">
+          <div className="w-px h-8 bg-gradient-to-b from-zinc-600 to-transparent" />
         </div>
       </section>
 
       {/* STATS */}
-      <section className="relative bg-[#0d0d0d] border-y border-zinc-800/50 rounded-2xl overflow-hidden">
+      <section className="relative bg-[#0d0d0d] border-y border-zinc-800/50">
         <div className="max-w-7xl mx-auto px-6 py-10">
           <div className="grid grid-cols-3 divide-x divide-zinc-800/50 text-center">
-            {[
-              { num: "500+", label: "ATHLETES" },
-              { num: "2", label: "ELITE COACHES" },
-              { num: "Rapsodo", label: "TECHNOLOGY" },
-            ].map((s, i) => (
-              <div key={i} className="px-4 py-2 group">
-                <p className={`font-display gradient-text group-hover:text-glow transition-all ${s.num === "Rapsodo" ? "text-3xl sm:text-5xl" : "text-4xl sm:text-5xl"}`}>
-                  {s.num === "2" ? (
-                    <span className="flex items-center justify-center gap-2">
-                      {s.num}
-                      <IconDiamond className="w-5 h-5 text-amber-500 inline-block" />
-                    </span>
-                  ) : s.num}
-                </p>
-                <p className="text-zinc-500 text-[11px] tracking-widest mt-1">{s.label}</p>
-              </div>
-            ))}
+            <div className="px-4 py-2 group">
+              <p className="font-display text-4xl sm:text-5xl gradient-text group-hover:text-glow transition-all">500+</p>
+              <p className="text-zinc-500 text-[11px] tracking-widest mt-1">ATHLETES</p>
+            </div>
+            <div className="px-4 py-2 group">
+              <p className="font-display text-4xl sm:text-5xl gradient-text group-hover:text-glow transition-all">
+                <span className="flex items-center justify-center gap-2">
+                  2
+                  <IconDiamond className="w-5 h-5 text-amber-500 inline-block" />
+                </span>
+              </p>
+              <p className="text-zinc-500 text-[11px] tracking-widest mt-1">COACHES</p>
+            </div>
+            <div className="px-4 py-2 group flex flex-col items-center justify-center">
+              <IconBaseball className="w-8 h-8 sm:w-10 sm:h-10 text-amber-500 group-hover:text-amber-400 transition-colors mb-1" />
+              <p className="text-zinc-500 text-[11px] tracking-widest mt-1">RAPSODO</p>
+            </div>
           </div>
         </div>
       </section>
