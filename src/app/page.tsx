@@ -248,16 +248,14 @@ export default function Home() {
                 <div key={i} className="card-modern rounded-2xl p-6 card-lift group flex items-start gap-5">
                   <div className="icon-box flex-shrink-0 group-hover:scale-110 transition-transform duration-300">{f.icon}</div>
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-start justify-between mb-1 gap-2">
-                      <h3 className="text-white font-bold text-sm">{f.title}</h3>
-                      {f.pitchTags.length > 0 && (
-                        <div className="flex gap-1 flex-wrap justify-end flex-shrink-0">
-                          {f.pitchTags.map((tag, t) => (
-                            <span key={t} className={`pitch-tag ${t===0?"pitch-tag-fb":t===1?"pitch-tag-sl":t===2?"pitch-tag-cb":"pitch-tag-ch"}`}>{tag}</span>
-                          ))}
-                        </div>
-                      )}
-                    </div>
+                    <h3 className="text-white font-bold text-sm mb-1">{f.title}</h3>
+                    {f.pitchTags.length > 0 && (
+                      <div className="flex gap-1 flex-wrap mb-2">
+                        {f.pitchTags.map((tag, t) => (
+                          <span key={t} className={`pitch-tag ${t===0?"pitch-tag-fb":t===1?"pitch-tag-sl":t===2?"pitch-tag-cb":"pitch-tag-ch"}`}>{tag}</span>
+                        ))}
+                      </div>
+                    )}
                     <p className="text-zinc-600 text-xs mb-3 leading-relaxed">{f.desc}</p>
                     <div className="velocity-bar-track">
                       <div className="velocity-bar-fill" style={{ width: `${f.bar}%` }} />
