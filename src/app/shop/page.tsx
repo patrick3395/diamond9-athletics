@@ -18,17 +18,15 @@ export default function Shop() {
   return (
     <main className="pt-16">
       {/* Hero */}
-      <section className="bg-gradient-to-b from-zinc-900 to-zinc-950 py-20 border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-amber-500 font-bold tracking-[0.3em] text-sm mb-4">
-            REP THE BRAND
-          </p>
-          <h1 className="text-4xl sm:text-6xl font-black tracking-wider mb-4">
-            DIAMOND NINE <span className="text-amber-500">MERCH</span>
+      <section className="relative bg-[#080808] py-24 overflow-hidden">
+        <div className="absolute inset-0 grid-bg opacity-30" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
+          <span className="section-label">REP THE BRAND</span>
+          <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl mt-4 mb-4">
+            DIAMOND NINE <span className="gradient-text">MERCH</span>
           </h1>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
-            Gear up with official Diamond Nine Athletics apparel and
-            accessories.
+            Gear up with official Diamond Nine Athletics apparel and accessories.
           </p>
         </div>
       </section>
@@ -39,34 +37,29 @@ export default function Shop() {
           {products.map((product) => (
             <div
               key={product.name}
-              className="bg-zinc-900 border border-zinc-800 rounded-sm overflow-hidden hover:border-amber-500/30 transition-all duration-300 group"
+              className="glass rounded-sm overflow-hidden card-lift"
             >
-              {/* Placeholder Image */}
-              <div className="h-64 bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="text-center relative z-10">
-                  <span className="text-amber-500 text-xl">◆</span>
-                  <p className="text-zinc-600 text-xs tracking-wider mt-2">
-                    DIAMOND NINE
-                  </p>
-                </div>
+              {/* Image Placeholder */}
+              <div className="aspect-square bg-zinc-900 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 grid-bg opacity-20" />
+                <span className="font-display text-7xl gradient-text relative z-10 select-none">D9</span>
               </div>
+
               <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-white font-bold tracking-wider">
-                    {product.name}
-                  </h3>
-                  <span className="text-amber-500 font-black text-lg">
-                    {product.price}
-                  </span>
-                </div>
-                <button className="w-full bg-amber-500 hover:bg-amber-400 text-black font-bold py-3 rounded-sm text-sm tracking-wider transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/25">
+                <h3 className="text-white font-bold tracking-wider mb-1">{product.name}</h3>
+                <p className="text-amber-400 font-black text-lg mb-4">{product.price}</p>
+                <button className="btn-outline w-full py-3 text-sm tracking-wider rounded-sm">
                   ADD TO CART
                 </button>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Bottom note */}
+        <p className="text-center text-zinc-600 text-sm mt-12 tracking-wider">
+          Secure checkout &bull; Free shipping on orders over $75
+        </p>
       </section>
     </main>
   );

@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  variable: "--font-bebas",
+  subsets: ["latin"],
+});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -12,7 +18,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Diamond Nine Athletics | Elite Baseball Training",
   description:
-    "Elite baseball training with Rapsodo technology. Pitching and hitting plans for high school and college athletes.",
+    "Elite baseball training with Rapsodo technology. Pitching and hitting plans for high school and college athletes in the Dallas-Fort Worth area.",
 };
 
 export default function RootLayout({
@@ -22,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans bg-zinc-950 text-white antialiased`}>
+      <body className={`${inter.variable} ${bebasNeue.variable} font-sans bg-[#080808] text-white antialiased`}>
         <Navbar />
         {children}
         <Footer />
