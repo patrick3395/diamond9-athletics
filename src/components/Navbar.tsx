@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+export const BUILD_VERSION = "v1.0.2";
+
 const navLinks = [
   { href: "/pitching-plans", label: "Pitching Plans" },
   { href: "/hitting-plans", label: "Hitting Plans" },
@@ -31,6 +33,9 @@ export default function Navbar() {
               </span>
               <span className="font-display text-xl text-white">
                 DIAMOND NINE
+              </span>
+              <span className="hidden sm:inline-block text-[10px] font-mono text-zinc-600 border border-zinc-800 rounded px-1.5 py-0.5 ml-1 select-none">
+                {BUILD_VERSION}
               </span>
             </Link>
 
