@@ -131,10 +131,10 @@ export default function About() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             {pillars.map((p, i) => (
-              <div key={i} className="card-modern rounded-2xl p-4 sm:p-5 card-lift group text-center">
-                <div className="icon-box mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">{p.icon}</div>
-                <h3 className="font-display text-base sm:text-lg text-white mb-1.5">{p.title}</h3>
-                <p className="text-zinc-600 text-[11px] leading-relaxed">{p.desc}</p>
+              <div key={i} className="card-modern rounded-2xl p-5 sm:p-6 card-lift group text-center flex flex-col items-center">
+                <div className="icon-box mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 shrink-0">{p.icon}</div>
+                <h3 className="font-display text-base sm:text-lg text-white mb-2">{p.title}</h3>
+                <p className="text-zinc-600 text-[11px] leading-relaxed mt-auto">{p.desc}</p>
               </div>
             ))}
           </div>
