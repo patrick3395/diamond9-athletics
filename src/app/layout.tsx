@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${bebasNeue.variable} font-sans bg-[#080808] text-white antialiased`}>
+      <body className={`${inter.variable} ${bebasNeue.variable} font-sans bg-[#040200] text-white antialiased`}>
         <ThemeProvider>
           <Navbar />
           {children}

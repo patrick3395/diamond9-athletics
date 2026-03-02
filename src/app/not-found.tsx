@@ -3,10 +3,10 @@ import { IconBaseball, IconDiamond } from "@/components/BaseballIcons";
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen bg-[#080808] flex flex-col items-center justify-center px-6 text-center relative overflow-hidden">
+    <main className="min-h-screen bg-[#040200] flex flex-col items-center justify-center px-6 text-center relative overflow-hidden">
 
       {/* Background orb */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(245,158,11,0.05)_0%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(153,84,210,0.05)_0%,transparent_100%)]" />
 
       {/* Giant 404 watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
@@ -15,8 +15,8 @@ export default function NotFound() {
 
       {/* Baseball stitching SVG */}
       <svg className="absolute bottom-0 left-0 right-0 w-full opacity-10 pointer-events-none" height="60" viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
-        <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30" stroke="#f59e0b" strokeWidth="1" fill="none" strokeDasharray="6 6"/>
-        <path d="M0,40 C360,70 720,10 1080,40 C1260,55 1380,30 1440,40" stroke="#f59e0b" strokeWidth="1" fill="none" strokeDasharray="6 6"/>
+        <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30" stroke="#9954d2" strokeWidth="1" fill="none" strokeDasharray="6 6"/>
+        <path d="M0,40 C360,70 720,10 1080,40 C1260,55 1380,30 1440,40" stroke="#9954d2" strokeWidth="1" fill="none" strokeDasharray="6 6"/>
       </svg>
 
       <div className="relative z-10 max-w-md mx-auto">
@@ -48,7 +48,7 @@ export default function NotFound() {
         {/* Divider + brand */}
         <div className="divider-glow max-w-[80px] mx-auto mt-12 mb-6" />
         <div className="flex items-center justify-center gap-2 text-zinc-700 text-xs tracking-widest">
-          <IconDiamond className="w-3 h-3 text-amber-500/40" />
+          <IconDiamond className="w-3 h-3 text-[#9954d2]/40" />
           DIAMOND NINE ATHLETICS
         </div>
       </div>

@@ -53,13 +53,13 @@ const plans = [
 
 export default function PitchingPlans() {
   return (
-    <main className="pt-16 bg-[#080808]">
+    <main className="pt-16 bg-[#040200]">
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-fenway.jpg")}')` }} />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/75 via-zinc-950/55 to-zinc-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(245,158,11,0.07)_0%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(153,84,210,0.07)_0%,transparent_100%)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <span className="badge-amber mb-5 inline-flex">⚾ TRAINING PROGRAMS</span>
           <h1 className="font-display leading-none">
@@ -72,7 +72,7 @@ export default function PitchingPlans() {
       </section>
 
       {/* ── Pitch Types Strip ────────────────────────────────── */}
-      <div className="bg-[#0a0800] border-y border-amber-500/10 py-4">
+      <div className="bg-[#030200] border-y border-[#9954d2]/10 py-4">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-3 justify-center">
           <span className="pitch-tag pitch-tag-fb">4-Seam Fastball</span>
           <span className="pitch-tag pitch-tag-sl">Slider</span>
@@ -94,7 +94,7 @@ export default function PitchingPlans() {
             >
               {plan.featured && (
                 <>
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#9954d2] to-transparent" />
                   <div className="ribbon">MOST POPULAR</div>
                 </>
               )}
@@ -103,7 +103,7 @@ export default function PitchingPlans() {
 
               <div className={`p-6 flex flex-col flex-1 ${plan.featured ? "pt-7" : ""}`}>
                 <div className="mb-5">
-                  <span className={`text-[10px] tracking-wider font-bold px-2.5 py-1 rounded-full ${plan.featured ? "bg-amber-500/15 text-amber-400 border border-amber-500/20" : "bg-zinc-800/60 text-zinc-500 border border-zinc-700/30"}`}>
+                  <span className={`text-[10px] tracking-wider font-bold px-2.5 py-1 rounded-full ${plan.featured ? "bg-[#9954d2]/15 text-[#b07adf] border border-[#9954d2]/20" : "bg-zinc-800/60 text-zinc-500 border border-zinc-700/30"}`}>
                     {plan.tag}
                   </span>
                 </div>
@@ -115,7 +115,7 @@ export default function PitchingPlans() {
                 <div className="mb-5">
                   <div className="flex justify-between text-[10px] text-zinc-600 mb-1.5">
                     <span>SESSION VALUE</span>
-                    <span className="text-amber-500">{plan.bar}%</span>
+                    <span className="text-[#9954d2]">{plan.bar}%</span>
                   </div>
                   <div className="velocity-bar-track">
                     <div className="velocity-bar-fill" style={{ width: `${plan.bar}%` }} />
@@ -125,7 +125,7 @@ export default function PitchingPlans() {
                 <ul className="space-y-2.5 flex-1 mb-7">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2.5 text-zinc-300 text-sm">
-                      <svg className="w-3.5 h-3.5 text-amber-500 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-3.5 h-3.5 text-[#9954d2] shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                       {feature}
@@ -144,8 +144,8 @@ export default function PitchingPlans() {
       {/* ── College Summer ───────────────────────────────────── */}
       <section className="max-w-7xl mx-auto px-6 pb-16">
         <div className="relative card-modern-amber rounded-2xl overflow-hidden card-lift card-shine">
-          <div className="h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent" />
-          <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/3 rounded-full blur-[80px]" />
+          <div className="h-1 bg-gradient-to-r from-transparent via-[#9954d2] to-transparent" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#9954d2]/3 rounded-full blur-[80px]" />
           <div className="jersey-num absolute right-8 bottom-0 text-[12rem] opacity-[0.03]">S</div>
           <div className="grid grid-cols-1 lg:grid-cols-2 relative z-10">
             <div className="p-8 sm:p-12">
@@ -158,11 +158,11 @@ export default function PitchingPlans() {
                 ENROLL NOW
               </Link>
             </div>
-            <div className="p-8 sm:p-12 border-t lg:border-t-0 lg:border-l border-amber-500/10 flex items-center">
+            <div className="p-8 sm:p-12 border-t lg:border-t-0 lg:border-l border-[#9954d2]/10 flex items-center">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
                 {["A/B/Recovery System","Long Toss Plan","Weekly Live At-Bats","Rapsodo Tracking","Bullpens with Feedback","Plyo Ball + Arm Care","Mobility Training","Video Capture","Workload Management"].map((feature) => (
                   <div key={feature} className="flex items-center gap-2 text-zinc-300 text-sm">
-                    <svg className="w-3.5 h-3.5 text-amber-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+                    <svg className="w-3.5 h-3.5 text-[#9954d2] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
                     {feature}
                   </div>
                 ))}
@@ -173,7 +173,7 @@ export default function PitchingPlans() {
       </section>
 
       {/* ── CTA ─────────────────────────────────────────────── */}
-      <section className="py-16 text-center px-6 border-t border-zinc-800/40 bg-[#070707]">
+      <section className="py-16 text-center px-6 border-t border-zinc-800/40 bg-[#020101]">
         <p className="font-display text-3xl text-white mb-2">NOT SURE WHICH PLAN?</p>
         <p className="text-zinc-500 text-sm mb-7">Reach out — we&apos;ll help you pick the right one.</p>
         <Link href="/contact" className="btn-outline px-8 py-3.5 rounded-full text-sm tracking-widest inline-block">CONTACT US</Link>

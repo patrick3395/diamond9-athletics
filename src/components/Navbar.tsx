@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 
-export const BUILD_VERSION = "v1.4.3";
+export const BUILD_VERSION = "v1.4.4";
 
 const navLinks = [
   { href: "/pitching-plans", label: "Pitching Plans" },
@@ -29,7 +29,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-amber-500 text-2xl transition-transform group-hover:rotate-45 duration-300">
+              <span className="text-[#9954d2] text-2xl transition-transform group-hover:rotate-45 duration-300">
                 ◆
               </span>
               <span className="font-display text-xl text-white">
@@ -48,7 +48,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
                     pathname === link.href
-                      ? "text-amber-400"
+                      ? "text-[#b07adf]"
                       : "text-zinc-400 hover:text-white"
                   }`}
                 >
@@ -113,7 +113,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-colors ${
                   pathname === link.href
-                    ? "text-amber-400 bg-amber-500/5"
+                    ? "text-[#b07adf] bg-[#9954d2]/5"
                     : "text-zinc-400 hover:text-white hover:bg-zinc-800/50"
                 }`}
               >

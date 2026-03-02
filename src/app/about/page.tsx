@@ -19,7 +19,7 @@ const coaches = [
       { label: "ATHLETES", value: "300+" },
       { label: "AVG GAIN", value: "+4 MPH" },
     ],
-    icon: <IconBaseball className="w-10 h-10 text-amber-400" />,
+    icon: <IconBaseball className="w-10 h-10 text-[#b07adf]" />,
     pitchFocus: ["4-Seam", "Slider", "Curve"],
   },
   {
@@ -32,27 +32,27 @@ const coaches = [
       { label: "ATHLETES", value: "200+" },
       { label: "AVG GAIN", value: "+5 MPH" },
     ],
-    icon: <IconGlove className="w-10 h-10 text-amber-400" />,
+    icon: <IconGlove className="w-10 h-10 text-[#b07adf]" />,
     pitchFocus: ["Sinker", "Changeup", "Cutter"],
   },
 ];
 
 const pillars = [
-  { icon: <IconChart className="w-5 h-5 text-amber-500" />, title: "DATA FIRST",     desc: "Every session logged with Rapsodo." },
-  { icon: <IconVideo className="w-5 h-5 text-amber-500" />, title: "VIDEO",          desc: "Frame-by-frame mechanical breakdowns." },
-  { icon: <IconGlove className="w-5 h-5 text-amber-500" />, title: "ARM LONGEVITY", desc: "Train hard. Protect your arm." },
-  { icon: <IconDiamond className="w-5 h-5 text-amber-500" />, title: "RESULTS",     desc: "500+ athletes. Avg +4–6 mph gain." },
+  { icon: <IconChart className="w-5 h-5 text-[#9954d2]" />, title: "DATA FIRST",     desc: "Every session logged with Rapsodo." },
+  { icon: <IconVideo className="w-5 h-5 text-[#9954d2]" />, title: "VIDEO",          desc: "Frame-by-frame mechanical breakdowns." },
+  { icon: <IconGlove className="w-5 h-5 text-[#9954d2]" />, title: "ARM LONGEVITY", desc: "Train hard. Protect your arm." },
+  { icon: <IconDiamond className="w-5 h-5 text-[#9954d2]" />, title: "RESULTS",     desc: "500+ athletes. Avg +4–6 mph gain." },
 ];
 
 export default function About() {
   return (
-    <main className="pt-16 bg-[#080808]">
+    <main className="pt-16 bg-[#040200]">
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-allstar.jpg")}')` }} />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/60 to-zinc-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(245,158,11,0.07)_0%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(153,84,210,0.07)_0%,transparent_100%)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <span className="badge-amber mb-5 inline-flex">◆ MEET THE TEAM</span>
           <h1 className="font-display leading-none">
@@ -71,7 +71,7 @@ export default function About() {
             <div key={i} className="card-modern rounded-2xl overflow-hidden card-lift group">
 
               {/* Photo panel */}
-              <div className="relative h-56 bg-gradient-to-br from-zinc-900 to-[#0a0a0a] overflow-hidden">
+              <div className="relative h-56 bg-gradient-to-br from-zinc-900 to-[#050202] overflow-hidden">
                 {/* Diagonal corner accent */}
                 <div className="coach-accent" />
                 {/* Grid */}
@@ -82,7 +82,7 @@ export default function About() {
                 </div>
                 {/* Icon */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-2xl bg-amber-500/8 border border-amber-500/15 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 rounded-2xl bg-[#9954d2]/8 border border-[#9954d2]/15 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {coach.icon}
                   </div>
                 </div>
@@ -113,7 +113,7 @@ export default function About() {
                 <p className="text-zinc-400 text-sm leading-relaxed mb-5">{coach.bio}</p>
                 <div className="flex flex-wrap gap-2">
                   {coach.specialties.map((s, j) => (
-                    <span key={j} className="text-[10px] text-amber-500/70 bg-amber-500/8 border border-amber-500/15 px-3 py-1 rounded-full tracking-wide">{s}</span>
+                    <span key={j} className="text-[10px] text-[#9954d2]/70 bg-[#9954d2]/8 border border-[#9954d2]/15 px-3 py-1 rounded-full tracking-wide">{s}</span>
                   ))}
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function About() {
       </section>
 
       {/* ── Pillars ──────────────────────────────────────────── */}
-      <section className="py-16 px-4 sm:px-6 bg-[#070707] border-t border-zinc-800/40">
+      <section className="py-16 px-4 sm:px-6 bg-[#020101] border-t border-zinc-800/40">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="section-label mb-3">OUR APPROACH</p>
@@ -144,9 +144,9 @@ export default function About() {
       {/* ── Mission quote ────────────────────────────────────── */}
       <section className="max-w-3xl mx-auto px-4 sm:px-6 py-20">
         <div className="card-modern-amber rounded-2xl p-8 sm:p-14 relative overflow-hidden">
-          <div className="h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent absolute top-0 left-8 right-8" />
+          <div className="h-px bg-gradient-to-r from-transparent via-[#9954d2]/40 to-transparent absolute top-0 left-8 right-8" />
           <div className="absolute inset-0 stripe-card" />
-          <IconDiamond className="w-8 h-8 text-amber-500/40 mx-auto mb-5 relative z-10" />
+          <IconDiamond className="w-8 h-8 text-[#9954d2]/40 mx-auto mb-5 relative z-10" />
           <p className="font-display text-xl sm:text-2xl text-white leading-relaxed relative z-10 text-center">
             &ldquo;DATA-DRIVEN TRAINING. ELITE INSTRUCTION. EVERY ATHLETE LEAVES BETTER THAN THEY ARRIVED.&rdquo;
           </p>

@@ -18,11 +18,11 @@ const upcomingFeatures = [
 
 export default function HittingPlans() {
   return (
-    <main className="pt-16 bg-[#080808]">
+    <main className="pt-16 bg-[#040200]">
       <section className="relative min-h-[85vh] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-fenway.jpg")}')` }} />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/85 via-zinc-950/70 to-zinc-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(245,158,11,0.06)_0%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(153,84,210,0.06)_0%,transparent_100%)]" />
 
         {/* Giant background text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
@@ -31,12 +31,12 @@ export default function HittingPlans() {
 
         {/* Baseball stitching SVG */}
         <svg className="absolute bottom-0 left-0 right-0 w-full opacity-8 pointer-events-none" height="60" viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
-          <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30" stroke="#f59e0b" strokeWidth="1" fill="none" strokeDasharray="6 6"/>
+          <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30" stroke="#9954d2" strokeWidth="1" fill="none" strokeDasharray="6 6"/>
         </svg>
 
         <div className="relative z-10 text-center px-6 max-w-2xl mx-auto">
           <div className="w-16 h-16 rounded-2xl card-modern-amber flex items-center justify-center mx-auto mb-8">
-            <IconBat className="w-8 h-8 text-amber-400" />
+            <IconBat className="w-8 h-8 text-[#b07adf]" />
           </div>
           <span className="badge-amber mb-6 inline-flex">◆ DROPPING 2025</span>
           <h1 className="font-display leading-none mb-2">

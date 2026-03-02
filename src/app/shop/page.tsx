@@ -8,23 +8,23 @@ export const metadata: Metadata = {
 };
 
 const products = [
-  { name: "D9 Logo Hat",        price: "$35", tag: "NEW",     accent: "#f59e0b", icon: "🧢" },
+  { name: "D9 Logo Hat",        price: "$35", tag: "NEW",     accent: "#9954d2", icon: "🧢" },
   { name: "Training Tee",       price: "$30", tag: null,      accent: "#d4d4d8", icon: "👕" },
-  { name: "Performance Hoodie", price: "$65", tag: "POPULAR", accent: "#f59e0b", icon: "🧥" },
+  { name: "Performance Hoodie", price: "$65", tag: "POPULAR", accent: "#9954d2", icon: "🧥" },
   { name: "D9 Snapback",        price: "$40", tag: null,      accent: "#ffffff", icon: "🧢" },
-  { name: "Bucket Hat",         price: "$32", tag: null,      accent: "#f59e0b", icon: "🎩" },
+  { name: "Bucket Hat",         price: "$32", tag: null,      accent: "#9954d2", icon: "🎩" },
   { name: "Long Sleeve Tee",    price: "$35", tag: null,      accent: "#d4d4d8", icon: "👔" },
 ];
 
 export default function Shop() {
   return (
-    <main className="pt-16 bg-[#080808]">
+    <main className="pt-16 bg-[#040200]">
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-allstar.jpg")}')` }} />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/60 to-zinc-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(245,158,11,0.07)_0%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(153,84,210,0.07)_0%,transparent_100%)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <span className="badge-amber mb-5 inline-flex">◆ OFFICIAL GEAR</span>
           <h1 className="font-display leading-none">
@@ -37,7 +37,7 @@ export default function Shop() {
       </section>
 
       {/* ── Drop Banner ───────────────────────────────────────── */}
-      <div className="bg-[#0a0800] border-y border-amber-500/15 py-4 overflow-hidden">
+      <div className="bg-[#030200] border-y border-[#9954d2]/15 py-4 overflow-hidden">
         <div className="marquee-container">
           <div className="animate-marquee flex items-center">
             {Array(8).fill(0).map((_, i) => (
@@ -55,7 +55,7 @@ export default function Shop() {
           {products.map((product, i) => (
             <div key={i} className="card-modern rounded-2xl overflow-hidden card-lift card-shine group cursor-pointer">
               {/* Product visual */}
-              <div className="relative aspect-[4/3] flex items-center justify-center overflow-hidden bg-gradient-to-br from-zinc-900 to-[#0a0a0a]">
+              <div className="relative aspect-[4/3] flex items-center justify-center overflow-hidden bg-gradient-to-br from-zinc-900 to-[#050202]">
                 <div className="absolute inset-0 grid-bg opacity-10" />
                 {/* D9 giant watermark */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">

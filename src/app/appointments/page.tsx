@@ -23,13 +23,13 @@ const plans = [
 
 export default function Appointments() {
   return (
-    <main className="pt-16 bg-[#080808]">
+    <main className="pt-16 bg-[#040200]">
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/batting-cages.jpg")}')` }} />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/60 to-zinc-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(245,158,11,0.07)_0%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(153,84,210,0.07)_0%,transparent_100%)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <span className="badge-amber mb-5 inline-flex">◆ GET STARTED</span>
           <h1 className="font-display leading-none">
@@ -42,7 +42,7 @@ export default function Appointments() {
       </section>
 
       {/* ── How to Book ──────────────────────────────────────── */}
-      <section className="bg-[#070707] border-y border-zinc-800/40 py-14 px-6">
+      <section className="bg-[#020101] border-y border-zinc-800/40 py-14 px-6">
         <div className="max-w-5xl mx-auto">
           <p className="section-label text-center mb-10">HOW TO BOOK</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -51,8 +51,8 @@ export default function Appointments() {
                 <div className="step-num mb-1">{step.num}</div>
                 <h3 className="font-display text-xl text-white mb-2">{step.title}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed">{step.desc}</p>
-                <div className="absolute top-5 right-5 w-7 h-7 rounded-full bg-amber-500/8 border border-amber-500/15 flex items-center justify-center">
-                  <span className="text-amber-500/50 text-xs font-black">{i + 1}</span>
+                <div className="absolute top-5 right-5 w-7 h-7 rounded-full bg-[#9954d2]/8 border border-[#9954d2]/15 flex items-center justify-center">
+                  <span className="text-[#9954d2]/50 text-xs font-black">{i + 1}</span>
                 </div>
               </div>
             ))}
@@ -66,11 +66,11 @@ export default function Appointments() {
 
           {/* Booking CTA card */}
           <div className="card-modern-amber rounded-2xl p-8 sm:p-10 relative overflow-hidden card-lift">
-            <div className="h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent absolute top-0 left-0 right-0" />
+            <div className="h-px bg-gradient-to-r from-transparent via-[#9954d2]/40 to-transparent absolute top-0 left-0 right-0" />
             <div className="jersey-num absolute right-0 bottom-[-20px] text-[8rem] opacity-[0.05]">D9</div>
             <div className="relative z-10">
-              <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+              <div className="w-14 h-14 rounded-2xl bg-[#9954d2]/10 border border-[#9954d2]/20 flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-[#b07adf]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <rect x="3" y="4" width="18" height="18" rx="3" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M16 2v4M8 2v4M3 10h18" strokeLinecap="round"/>
                   <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" strokeWidth={2} strokeLinecap="round"/>
@@ -121,13 +121,13 @@ export default function Appointments() {
                 {plans.map((plan) => (
                   <div
                     key={plan.name}
-                    className={`flex justify-between items-center py-1.5 px-2 rounded-lg transition-colors ${plan.featured ? "bg-amber-500/8 border border-amber-500/10" : "hover:bg-zinc-800/20"}`}
+                    className={`flex justify-between items-center py-1.5 px-2 rounded-lg transition-colors ${plan.featured ? "bg-[#9954d2]/8 border border-[#9954d2]/10" : "hover:bg-zinc-800/20"}`}
                   >
                     <div>
                       <span className="text-sm text-zinc-300">{plan.name}</span>
                       <span className="ml-2 text-zinc-600 text-xs">{plan.sub}</span>
                     </div>
-                    <span className={`font-black font-display text-lg ${plan.featured ? "gradient-text" : "text-amber-400"}`}>{plan.price}</span>
+                    <span className={`font-black font-display text-lg ${plan.featured ? "gradient-text" : "text-[#b07adf]"}`}>{plan.price}</span>
                   </div>
                 ))}
               </div>
