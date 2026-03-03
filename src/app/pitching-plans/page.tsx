@@ -3,6 +3,57 @@ import type { Metadata } from "next";
 import { img } from "@/lib/config";
 import { IconField } from "@/components/BaseballIcons";
 
+const downloads = [
+  {
+    title: "College Throwing Routine",
+    desc: "Full in-season & off-season throwing program for college pitchers.",
+    file: "/downloads/college-throwing-routine.pdf",
+    tag: "COLLEGE",
+    tagClass: "pitch-tag-fb",
+    icon: "⚾",
+  },
+  {
+    title: "College Plyo Ball Program",
+    desc: "Velocity-building plyometric ball program designed for college arms.",
+    file: "/downloads/college-plyo.pdf",
+    tag: "COLLEGE",
+    tagClass: "pitch-tag-fb",
+    icon: "🔥",
+  },
+  {
+    title: "High School Throwing Routine",
+    desc: "Arm care and throwing schedule built for prep pitchers.",
+    file: "/downloads/hs-throwing-routine.pdf",
+    tag: "HIGH SCHOOL",
+    tagClass: "pitch-tag-sl",
+    icon: "⚾",
+  },
+  {
+    title: "High School Plyo Ball Program",
+    desc: "Introduction to plyometric training for developing HS arms.",
+    file: "/downloads/hs-plyo.pdf",
+    tag: "HIGH SCHOOL",
+    tagClass: "pitch-tag-sl",
+    icon: "🔥",
+  },
+  {
+    title: "Mobility & Strength Guide",
+    desc: "Complete mobility and strength training protocol for pitchers at all levels.",
+    file: "/downloads/mobility-strength.pdf",
+    tag: "ALL LEVELS",
+    tagClass: "pitch-tag-cb",
+    icon: "💪",
+  },
+  {
+    title: "Summer College Training Flyer",
+    desc: "Overview of the Summer College Pitcher program — everything included.",
+    file: "/downloads/summer-college-flyer.pdf",
+    tag: "SUMMER",
+    tagClass: "pitch-tag-ch",
+    icon: "☀️",
+  },
+];
+
 export const metadata: Metadata = {
   title: "Pitching Plans | Diamond Nine Athletics",
   description: "Elite pitching training plans with Rapsodo tracking.",
@@ -169,6 +220,57 @@ export default function PitchingPlans() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Action Photo Strip ───────────────────────────────── */}
+      <section className="max-w-7xl mx-auto px-6 pb-10">
+        <div className="relative rounded-2xl overflow-hidden h-64 sm:h-80 card-lift">
+          <img src={img("/images/athlete-pitching.jpg")} alt="Diamond Nine pitcher in action" className="w-full h-full object-cover object-top" />
+          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/80 via-zinc-950/30 to-transparent" />
+          <div className="absolute inset-0 flex items-center px-10">
+            <div>
+              <span className="badge-amber mb-3 inline-flex">◆ ELITE COACHING</span>
+              <h2 className="font-display text-4xl sm:text-5xl text-white leading-none">COACHED BY THE BEST</h2>
+              <p className="text-zinc-400 text-sm mt-2">Every session. Every rep. Real feedback from real coaches.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Free Downloads ───────────────────────────────────── */}
+      <section className="max-w-7xl mx-auto px-6 pb-16">
+        <div className="text-center mb-10">
+          <p className="section-label mb-3">FREE RESOURCES</p>
+          <h2 className="font-display text-4xl sm:text-5xl text-white">WORKOUT <span className="gradient-text">PLANS</span></h2>
+          <div className="divider-glow max-w-[100px] mx-auto mt-5 mb-4" />
+          <p className="text-zinc-500 text-sm">Download our training programs and start working on your craft today.</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {downloads.map((dl) => (
+            <div key={dl.file} className="relative card-modern rounded-2xl p-6 card-lift flex flex-col group">
+              <div className="flex items-start gap-3 mb-4">
+                <div className="icon-box flex-shrink-0 text-xl leading-none flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  {dl.icon}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <span className={`pitch-tag ${dl.tagClass} mb-2 inline-block`}>{dl.tag}</span>
+                  <h3 className="text-white font-bold text-sm leading-snug">{dl.title}</h3>
+                </div>
+              </div>
+              <p className="text-zinc-500 text-xs leading-relaxed flex-1 mb-5">{dl.desc}</p>
+              <a
+                href={img(dl.file)}
+                download
+                className="btn-outline text-center py-3 rounded-full text-xs tracking-widest font-bold flex items-center justify-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                DOWNLOAD FREE
+              </a>
+            </div>
+          ))}
         </div>
       </section>
 

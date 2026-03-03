@@ -240,7 +240,12 @@ export default function Home() {
                 <span className="text-white">THE DIAMOND</span>
                 <span className="block gradient-text">DIFFERENCE</span>
               </h2>
-              <p className="text-zinc-500 text-sm mb-8 max-w-xs">Elite tech. Elite coaches. Every session tracked, analyzed, and used to push you further.</p>
+              <p className="text-zinc-500 text-sm mb-6 max-w-xs">Elite tech. Elite coaches. Every session tracked, analyzed, and used to push you further.</p>
+              {/* Action photo */}
+              <div className="relative rounded-2xl overflow-hidden h-48 mb-6 card-lift">
+                <img src={img("/images/athlete-batting.jpg")} alt="Diamond Nine athlete at the plate" className="w-full h-full object-cover object-center" />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 to-transparent" />
+              </div>
               <Link href="/about" className="btn-outline px-8 py-3 text-sm rounded-full inline-block tracking-widest">MEET THE COACHES</Link>
             </div>
             <div className="grid grid-cols-1 gap-4">
@@ -298,9 +303,15 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Link href="/pitching-plans" className="btn-gold px-10 py-4 rounded-full text-sm tracking-widest font-black inline-block">
-                  ENROLL NOW
-                </Link>
+                <div className="flex flex-wrap gap-3">
+                  <Link href="/pitching-plans" className="btn-gold px-10 py-4 rounded-full text-sm tracking-widest font-black inline-block">
+                    ENROLL NOW
+                  </Link>
+                  <a href={img("/downloads/summer-college-flyer.pdf")} download className="btn-outline px-8 py-4 rounded-full text-sm tracking-widest font-bold inline-flex items-center gap-2">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                    GET THE FLYER
+                  </a>
+                </div>
               </div>
             </div>
 
