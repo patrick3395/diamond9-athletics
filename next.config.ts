@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
+// NEXT_PUBLIC_GITHUB_PAGES=true is only set during manual gh-pages builds.
+// Vercel builds never set this — so basePath/output are Vercel-safe.
+const isGitHubPages = process.env.NEXT_PUBLIC_GITHUB_PAGES === "true";
 
 const nextConfig: NextConfig = {
-  output: isProd ? "export" : undefined,
-  basePath: isProd ? "/diamond9-athletics" : "",
+  output: isGitHubPages ? "export" : undefined,
+  basePath: isGitHubPages ? "/diamond9-athletics" : "",
   images: {
     unoptimized: true,
   },
