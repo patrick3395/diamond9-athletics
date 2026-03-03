@@ -344,24 +344,11 @@ body {
   color: #111111;
 }
 
-/* ── Hero background images: swap dark overlay to cream ──── */
-/* Hide the bg-image layer; section bg-color shows as cream   */
-[data-theme="light"] section > div[class*="bg-cover"],
-[data-theme="light"] section > div[class*="bg-no-repeat"] {
-  opacity: 0.08 !important;
-}
-/* Neutralise every dark zinc gradient overlay inside sections */
-[data-theme="light"] section > div[class*="bg-zinc-950"],
-[data-theme="light"] section > div[class*="from-zinc-950"],
-[data-theme="light"] section > div[class*="via-zinc-950"],
-[data-theme="light"] section > div[class*="to-zinc-950"] {
-  background: rgba(248,242,237,0.96) !important;
-}
-/* Also catch the radial purple glow overlays — keep subtle   */
-[data-theme="light"] section > div[class*="radial-gradient"] {
-  opacity: 0.4 !important;
-}
-/* Inner card dark gradients */
+/* ── Hero sections: keep images + dark overlays intact ─────
+   Don't touch bg-cover images or zinc overlays inside sections.
+   Heroes look best dark with their background photos.          */
+
+/* Non-hero dark bg divs inside cards (not hero overlays) */
 [data-theme="light"] div[class*="rounded-2xl"] > div[class*="via-zinc-950"],
 [data-theme="light"] div[class*="rounded-2xl"] > div[class*="from-zinc-950"] {
   background: rgba(255,255,255,0.6) !important;
@@ -382,6 +369,16 @@ body {
 [data-theme="light"] .text-zinc-500        { color: #666666 !important; }
 [data-theme="light"] .text-zinc-600        { color: #777777 !important; }
 [data-theme="light"] .text-zinc-700        { color: #888888 !important; }
+
+/* ── Hero sections: preserve white text on dark image overlays */
+[data-theme="light"] section:has(> div[class*="bg-cover"]) .text-white,
+[data-theme="light"] section:has(> div[class*="bg-no-repeat"]) .text-white { color: #ffffff !important; }
+[data-theme="light"] section:has(> div[class*="bg-cover"]) .text-zinc-400,
+[data-theme="light"] section:has(> div[class*="bg-no-repeat"]) .text-zinc-400 { color: rgba(255,255,255,0.65) !important; }
+[data-theme="light"] section:has(> div[class*="bg-cover"]) .text-zinc-500,
+[data-theme="light"] section:has(> div[class*="bg-no-repeat"]) .text-zinc-500 { color: rgba(255,255,255,0.5) !important; }
+[data-theme="light"] section:has(> div[class*="bg-cover"]) .btn-outline,
+[data-theme="light"] section:has(> div[class*="bg-no-repeat"]) .btn-outline { border-color: rgba(255,255,255,0.4) !important; color: #ffffff !important; }
 
 /* ── Backgrounds: all dark zinc → cream/white ─────────────── */
 [data-theme="light"] .bg-zinc-950          { background-color: #F8F2ED !important; }
