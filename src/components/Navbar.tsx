@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
+import { img } from "@/lib/config";
 
 export const BUILD_VERSION = "v1.4.5";
 
@@ -29,13 +30,12 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-[#9954d2] text-2xl transition-transform group-hover:rotate-45 duration-300">
-                ◆
-              </span>
-              <span className="font-display text-xl text-white">
-                DIAMOND NINE
-              </span>
-              <span className="inline-block text-[10px] font-mono text-zinc-500 border border-zinc-800 rounded px-1.5 py-0.5 ml-1 select-none">
+              <img
+                src={img("/images/d9-logo.png")}
+                alt="Diamond Nine Athletics"
+                className="h-9 w-auto mix-blend-screen group-hover:opacity-90 transition-opacity duration-200"
+              />
+              <span className="inline-block text-[10px] font-mono text-zinc-500 border border-zinc-800 rounded px-1.5 py-0.5 select-none">
                 {BUILD_VERSION}
               </span>
             </Link>

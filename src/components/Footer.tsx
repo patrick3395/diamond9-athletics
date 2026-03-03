@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BUILD_VERSION } from "./Navbar";
+import { img } from "@/lib/config";
 
 export default function Footer() {
   return (
@@ -14,9 +15,12 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-[#9954d2] text-2xl">◆</span>
-              <span className="font-display text-xl text-white tracking-widest">DIAMOND NINE</span>
+            <div className="mb-4">
+              <img
+                src={img("/images/d9-logo.png")}
+                alt="Diamond Nine Athletics"
+                className="h-12 w-auto mix-blend-screen"
+              />
             </div>
             <p className="text-zinc-600 text-xs leading-relaxed mb-5 max-w-[220px]">
               Elite baseball training powered by Rapsodo data. Real coaches. Real results.
