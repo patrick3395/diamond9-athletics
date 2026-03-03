@@ -122,6 +122,54 @@ export default function About() {
         </div>
       </section>
 
+      {/* ── Featured Video ───────────────────────────────────── */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-4">
+        <div className="text-center mb-8">
+          <p className="section-label mb-3">SEE IT IN ACTION</p>
+          <h2 className="font-display text-4xl sm:text-5xl text-white">WATCH THE <span className="gradient-text">COACHES</span></h2>
+          <div className="divider-glow max-w-[100px] mx-auto mt-5" />
+        </div>
+
+        {/* Main trainer video */}
+        <div className="relative rounded-2xl overflow-hidden card-modern-amber card-lift mb-5">
+          <div className="h-1 bg-gradient-to-r from-transparent via-[#9954d2] to-transparent" />
+          <div className="aspect-video w-full">
+            <iframe
+              src="https://drive.google.com/file/d/1aGdvsoJLRG3xG-LepY_DHETKaGb87hH1/preview"
+              className="w-full h-full"
+              allow="autoplay"
+              allowFullScreen
+            />
+          </div>
+          <div className="px-6 py-4 flex items-center justify-between gap-4 bg-zinc-950/60">
+            <div>
+              <p className="text-white font-bold text-sm">COACHES IN ACTION</p>
+              <p className="text-zinc-500 text-xs mt-0.5">Diamond Nine Athletics — Training Session</p>
+            </div>
+            <span className="badge-amber shrink-0">◆ FEATURED</span>
+          </div>
+        </div>
+
+        {/* Athlete clip */}
+        <div className="relative rounded-2xl overflow-hidden card-modern card-lift">
+          <div className="aspect-video w-full">
+            <iframe
+              src="https://drive.google.com/file/d/1Py9YLc1LKHXo5QuFh4RByXdiXNZYkd0U/preview"
+              className="w-full h-full"
+              allow="autoplay"
+              allowFullScreen
+            />
+          </div>
+          <div className="px-6 py-4 flex items-center justify-between gap-4 bg-zinc-950/60">
+            <div>
+              <p className="text-white font-bold text-sm">ATHLETE SPOTLIGHT</p>
+              <p className="text-zinc-500 text-xs mt-0.5">Thrall — Completion Highlight</p>
+            </div>
+            <span className="pitch-tag pitch-tag-fb shrink-0">⚾ LIVE SESSION</span>
+          </div>
+        </div>
+      </section>
+
       {/* ── Pillars ──────────────────────────────────────────── */}
       <section className="py-16 px-4 sm:px-6 bg-[#020101] border-t border-zinc-800/40">
         <div className="max-w-5xl mx-auto">
