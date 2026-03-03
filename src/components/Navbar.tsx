@@ -27,13 +27,13 @@ export default function Navbar() {
 
       <div className="bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-36">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
               <img
                 src={img("/images/d9-logo.png")}
                 alt="Diamond Nine Athletics"
-                className="h-[72px] w-auto mix-blend-screen group-hover:opacity-90 transition-opacity duration-200"
+                className="h-[144px] w-auto mix-blend-screen group-hover:opacity-90 transition-opacity duration-200"
               />
               <span className="inline-block text-[10px] font-mono text-zinc-500 border border-zinc-800 rounded px-1.5 py-0.5 select-none">
                 {BUILD_VERSION}

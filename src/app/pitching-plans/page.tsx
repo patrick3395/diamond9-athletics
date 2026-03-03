@@ -104,7 +104,7 @@ const plans = [
 
 export default function PitchingPlans() {
   return (
-    <main className="pt-20 bg-[#040200]">
+    <main className="pt-36 bg-[#040200]">
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative py-24 overflow-hidden">
