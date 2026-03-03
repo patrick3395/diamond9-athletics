@@ -242,8 +242,8 @@ export default function Home() {
               </h2>
               <p className="text-zinc-500 text-sm mb-6 max-w-xs">Elite tech. Elite coaches. Every session tracked, analyzed, and used to push you further.</p>
               {/* Action photo */}
-              <div className="relative rounded-2xl overflow-hidden h-48 mb-6 card-lift">
-                <img src={img("/images/athlete-batting.jpg")} alt="Diamond Nine athlete at the plate" className="w-full h-full object-cover object-center" />
+              <div className="relative rounded-2xl overflow-hidden mb-6 card-lift">
+                <img src={img("/images/athlete-batting.jpg")} alt="Diamond Nine athlete at the plate" className="w-full h-auto block" />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 to-transparent" />
               </div>
               <Link href="/about" className="btn-outline px-8 py-3 text-sm rounded-full inline-block tracking-widest">MEET THE COACHES</Link>
