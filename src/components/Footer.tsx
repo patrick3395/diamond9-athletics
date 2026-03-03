@@ -19,7 +19,7 @@ export default function Footer() {
               <img
                 src={img("/images/d9-logo.png")}
                 alt="Diamond Nine Athletics"
-                className="h-12 w-auto mix-blend-screen"
+                className="h-24 w-auto mix-blend-screen"
               />
             </div>
             <p className="text-zinc-600 text-xs leading-relaxed mb-5 max-w-[220px]">
