@@ -2,32 +2,6 @@ import Link from "next/link";
 import { img } from "@/lib/config";
 import { IconBaseball, IconGlove, IconBat, IconChart, IconVideo, IconTrophy, IconDiamond } from "@/components/BaseballIcons";
 
-const marqueeItems = [
-  "⚾ RAPSODO TRACKING",
-  "◆ ELITE COACHING",
-  "⚾ ARM CARE PROTOCOLS",
-  "◆ VIDEO ANALYSIS",
-  "⚾ VELOCITY DEVELOPMENT",
-  "◆ RECRUITING VIDEOS",
-  "⚾ LIVE AT-BATS",
-  "◆ WEIGHTED BALL PROGRAMS",
-  "⚾ RAPSODO TRACKING",
-  "◆ ELITE COACHING",
-  "⚾ ARM CARE PROTOCOLS",
-  "◆ VIDEO ANALYSIS",
-  "⚾ VELOCITY DEVELOPMENT",
-  "◆ RECRUITING VIDEOS",
-  "⚾ LIVE AT-BATS",
-  "◆ WEIGHTED BALL PROGRAMS",
-];
-
-const stats = [
-  { num: "500+",  label: "ATHLETES TRAINED" },
-  { num: "+4–6",  label: "AVG MPH GAIN"     },
-  { num: "2",     label: "ELITE COACHES"    },
-  { num: "100%",  label: "DATA DRIVEN"      },
-];
-
 const features = [
   {
     title: "Rapsodo Analytics",
@@ -87,16 +61,14 @@ export default function Home() {
         </svg>
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <div className="animate-fade-in-up mb-6">
-            <span className="badge-amber">◆ DIAMOND NINE ATHLETICS</span>
-          </div>
+          <p className="animate-fade-in-up text-zinc-400 text-sm sm:text-base tracking-[0.3em] uppercase mb-4">Elevate Your Game</p>
           <h1 className="font-display leading-none mb-6">
-            <span className="animate-fade-in-up block text-5xl sm:text-8xl lg:text-[10rem] gradient-text-white">ELEVATE</span>
+            <span className="animate-fade-in-up block text-5xl sm:text-8xl lg:text-[10rem] gradient-text-white">DIAMOND 9</span>
             <div className="divider-glow max-w-[80px] mx-auto my-2 animate-fade-in-up-delay" />
-            <span className="animate-fade-in-up-delay block text-5xl sm:text-8xl lg:text-[10rem] gradient-text text-glow">YOUR GAME</span>
+            <span className="animate-fade-in-up-delay block text-5xl sm:text-8xl lg:text-[10rem] gradient-text text-glow">ATHLETICS</span>
           </h1>
           <p className="animate-fade-in-up-delay-2 text-zinc-400 text-base sm:text-lg mb-10">
-            Rapsodo-powered pitching training. Real data. Real results.
+            Real data. Real results.
           </p>
           <div className="animate-fade-in-up-delay-3 flex flex-row gap-3 justify-center flex-wrap">
             <Link href="/appointments" className="btn-gold animate-pulse-glow px-8 py-4 text-sm rounded-full inline-block font-black tracking-widest">
@@ -113,32 +85,6 @@ export default function Home() {
           <div className="w-px h-10 bg-gradient-to-b from-[#9954d2]/30 to-transparent" />
         </div>
       </section>
-
-      {/* ══ SCOREBOARD STATS ══════════════════════════════════════ */}
-      <div className="scoreboard-panel py-8">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#9954d2]/10">
-            {stats.map((s, i) => (
-              <div key={i} className="px-6 py-4 text-center">
-                <div className="stat-accent mx-auto" />
-                <p className="scoreboard-num text-4xl sm:text-5xl">{s.num}</p>
-                <p className="scoreboard-label mt-2">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ══ LED MARQUEE ═══════════════════════════════════════════ */}
-      <div className="marquee-led py-3 overflow-hidden relative">
-        <div className="marquee-container">
-          <div className="animate-marquee flex items-center">
-            {marqueeItems.map((item, i) => (
-              <span key={i} className="inline-block px-6 marquee-led-text">{item}</span>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* ══ TRAINING PLANS ════════════════════════════════════════ */}
       <section className="relative py-24 px-6 overflow-hidden">
@@ -246,7 +192,6 @@ export default function Home() {
                 <img src={img("/images/athlete-batting.jpg")} alt="Diamond Nine athlete at the plate" className="w-full h-auto block" />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 to-transparent" />
               </div>
-              <Link href="/about" className="btn-outline px-8 py-3 text-sm rounded-full inline-block tracking-widest">MEET THE COACHES</Link>
             </div>
             <div className="grid grid-cols-1 gap-4">
               {features.map((f, i) => (
@@ -321,10 +266,10 @@ export default function Home() {
               <div className="p-8 sm:p-10 relative overflow-hidden">
                 <div className="jersey-num absolute right-2 bottom-0 text-[8rem] opacity-[0.04]">HS</div>
                 <span className="badge-amber mb-5 inline-flex">⚾ PREP PROGRAM</span>
-                <h2 className="font-display text-4xl sm:text-5xl text-white mb-1">HIGH SCHOOL</h2>
+                <h2 className="font-display text-4xl sm:text-5xl text-white mb-1">HIGH SCHOOL SUMMER</h2>
                 <div className="flex items-baseline gap-2 mb-7">
-                  <span className="font-display text-6xl gradient-text">$50</span>
-                  <span className="text-zinc-600 text-sm">/ session — up to $300</span>
+                  <span className="font-display text-6xl gradient-text">$850</span>
+                  <span className="text-zinc-600 text-sm">/ full program</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2.5 mb-8">
                   {["Rapsodo Feedback","Mechanical Analysis","Arm Care Protocol","Video Breakdown","Weighted Ball","Recruiting Prep"].map((feature) => (
@@ -334,9 +279,7 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Link href="/pitching-plans" className="btn-outline px-10 py-4 rounded-full text-sm tracking-widest font-bold inline-block">
-                  VIEW PLANS
-                </Link>
+                <Link href="/appointments" className="btn-gold px-10 py-4 rounded-full text-sm tracking-widest font-black inline-block">ENROLL NOW</Link>
               </div>
             </div>
 
