@@ -1,37 +1,6 @@
 import Link from "next/link";
 import { img } from "@/lib/config";
-import { IconBaseball, IconGlove, IconBat, IconChart, IconVideo, IconTrophy, IconDiamond } from "@/components/BaseballIcons";
-
-const features = [
-  {
-    title: "Rapsodo Analytics",
-    desc: "Velocity, spin rate, break, and ball flight — every pitch measured in real time.",
-    icon: <IconChart className="w-6 h-6 text-[#9954d2]" />,
-    pitchTags: ["4-Seam", "Slider", "Curveball", "Changeup"],
-    bar: 92,
-  },
-  {
-    title: "Video Breakdown",
-    desc: "Frame-by-frame mechanical analysis. See what's holding you back.",
-    icon: <IconVideo className="w-6 h-6 text-[#9954d2]" />,
-    pitchTags: [],
-    bar: 88,
-  },
-  {
-    title: "Arm Care Protocol",
-    desc: "Longevity-first programming so you throw harder, longer.",
-    icon: <IconGlove className="w-6 h-6 text-[#9954d2]" />,
-    pitchTags: [],
-    bar: 95,
-  },
-  {
-    title: "Proven Results",
-    desc: "500+ athletes. Real data. Real improvement every session.",
-    icon: <IconTrophy className="w-6 h-6 text-[#9954d2]" />,
-    pitchTags: [],
-    bar: 100,
-  },
-];
+import { IconBaseball, IconBat, IconDiamond } from "@/components/BaseballIcons";
 
 const steps = [
   { num: "01", title: "CHOOSE A PLAN", desc: "Pick from Half Session to the full College Summer program." },
@@ -172,48 +141,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ THE DIAMOND DIFFERENCE ════════════════════════════════ */}
-      <section className="relative py-24 px-6 bg-[#050202]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-14 items-start">
-            <div>
-              <p className="section-label mb-4">WHY CHOOSE US</p>
-              <h2 className="font-display text-5xl sm:text-6xl leading-none mb-5">
-                <span className="text-white">THE DIAMOND</span>
-                <span className="block gradient-text">DIFFERENCE</span>
-              </h2>
-              <p className="text-zinc-500 text-sm mb-6 max-w-xs">Elite tech. Elite coaches. Every session tracked, analyzed, and used to push you further.</p>
-              {/* Action photo */}
-              <div className="relative rounded-2xl overflow-hidden mb-6 card-lift">
-                <img src={img("/images/athlete-batting.jpg")} alt="Diamond Nine athlete at the plate" className="w-full h-auto block" />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 to-transparent" />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 gap-4">
-              {features.map((f, i) => (
-                <div key={i} className="card-modern rounded-2xl p-6 card-lift group flex items-start gap-5">
-                  <div className="icon-box flex-shrink-0 group-hover:scale-110 transition-transform duration-300">{f.icon}</div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-white font-bold text-sm mb-1">{f.title}</h3>
-                    {f.pitchTags.length > 0 && (
-                      <div className="flex gap-1 flex-wrap mb-2">
-                        {f.pitchTags.map((tag, t) => (
-                          <span key={t} className={`pitch-tag ${t===0?"pitch-tag-fb":t===1?"pitch-tag-sl":t===2?"pitch-tag-cb":"pitch-tag-ch"}`}>{tag}</span>
-                        ))}
-                      </div>
-                    )}
-                    <p className="text-zinc-600 text-xs mb-3 leading-relaxed">{f.desc}</p>
-                    <div className="velocity-bar-track">
-                      <div className="velocity-bar-fill" style={{ width: `${f.bar}%` }} />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
