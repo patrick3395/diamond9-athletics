@@ -287,31 +287,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ FINAL CTA ═════════════════════════════════════════════ */}
-      <section className="relative py-32 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/batting-cages.jpg")}')` }} />
-        <div className="absolute inset-0 bg-zinc-950/87" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_50%,rgba(153,84,210,0.08)_0%,transparent_100%)]" />
-        <svg className="absolute top-0 left-0 right-0 w-full opacity-10 pointer-events-none" height="60" viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
-          <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30" stroke="#9954d2" strokeWidth="1" fill="none" strokeDasharray="6 6"/>
-        </svg>
-        <div className="relative max-w-2xl mx-auto text-center">
-          <p className="section-label mb-5">DON&apos;T WAIT</p>
-          <h2 className="font-display text-6xl sm:text-8xl lg:text-9xl leading-none mb-4">
-            <span className="text-white">READY TO</span>
-            <span className="block gradient-text text-glow">START?</span>
-          </h2>
-          <p className="text-zinc-400 text-sm mb-10">Every session is tracked. Every rep counts.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointments" className="btn-gold animate-pulse-glow px-12 py-5 text-sm rounded-full inline-block font-black tracking-widest">
-              BOOK YOUR SESSION
-            </Link>
-            <Link href="/pitching-plans" className="btn-outline px-12 py-5 text-sm rounded-full inline-block tracking-widest">
-              SEE PLANS
-            </Link>
-          </div>
-        </div>
-      </section>
 
     </main>
   );
