@@ -23,7 +23,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-zinc-600 text-xs leading-relaxed mb-5 max-w-[220px]">
-              Elite baseball training powered by Rapsodo data. Real coaches. Real results.
+              Elite baseball training powered by Rapsodo data. Real trainers. Real results.
             </p>
             {/* Scoreboard mini stats */}
             <div className="flex gap-3">

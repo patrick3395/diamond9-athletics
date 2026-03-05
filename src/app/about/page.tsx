@@ -5,10 +5,10 @@ import { IconBaseball, IconGlove, IconDiamond } from "@/components/BaseballIcons
 
 export const metadata: Metadata = {
   title: "About | Diamond Nine Athletics",
-  description: "Meet the elite coaches behind Diamond Nine Athletics.",
+  description: "Meet the elite trainers behind Diamond Nine Athletics.",
 };
 
-const coaches = [
+const trainers = [
   {
     name: "WES GAFFORD",
     title: "HEAD TRAINER",
@@ -19,9 +19,9 @@ const coaches = [
   },
   {
     name: "TURNER OLSON",
-    title: "HITTING COACH",
+    title: "HITTING TRAINER",
     jersey: "9",
-    bio: "Mechanical precision coach focused on repeatable delivery, command, and long-term arm longevity.",
+    bio: "Mechanical precision trainer focused on repeatable delivery, command, and long-term arm longevity.",
     specialties: ["Mechanical Analysis", "Weighted Ball", "Live At-Bats", "Video Breakdown"],
     icon: <IconGlove className="w-10 h-10 text-[#b07adf]" />,
   },
@@ -47,10 +47,10 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── Coach Cards ──────────────────────────────────────── */}
+      {/* ── Trainer Cards ──────────────────────────────────────── */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {coaches.map((coach, i) => {
+          {trainers.map((trainer, i) => {
             const card = (
               <>
                 {/* Photo panel */}
@@ -61,7 +61,7 @@ export default function About() {
                   <div className="absolute inset-0 grid-bg opacity-15" />
                   {/* Jersey watermark */}
                   <div className="absolute right-3 top-1/2 -translate-y-1/2 font-display text-[8rem] leading-none text-white/[0.04] select-none pointer-events-none">
-                    #{coach.jersey}
+                    #{trainer.jersey}
                   </div>
                   {/* Photo */}
                   {i === 0 ? (
@@ -79,11 +79,11 @@ export default function About() {
 
                 {/* Info */}
                 <div className="p-5 sm:p-7">
-                  <p className="section-label mb-1">{coach.title}</p>
-                  <h2 className="font-display text-3xl text-white mb-3">{coach.name}</h2>
-                  <p className="text-zinc-400 text-sm leading-relaxed mb-5">{coach.bio}</p>
+                  <p className="section-label mb-1">{trainer.title}</p>
+                  <h2 className="font-display text-3xl text-white mb-3">{trainer.name}</h2>
+                  <p className="text-zinc-400 text-sm leading-relaxed mb-5">{trainer.bio}</p>
                   <div className="flex flex-wrap gap-2">
-                    {coach.specialties.map((s, j) => (
+                    {trainer.specialties.map((s, j) => (
                       <span key={j} className="text-[10px] text-[#9954d2]/70 bg-[#9954d2]/8 border border-[#9954d2]/15 px-3 py-1 rounded-full tracking-wide">{s}</span>
                     ))}
                   </div>
@@ -129,7 +129,7 @@ export default function About() {
           </div>
           <div className="px-6 py-4 flex items-center justify-between gap-4 bg-zinc-950/60">
             <div>
-              <p className="text-white font-bold text-sm">COACHES IN ACTION</p>
+              <p className="text-white font-bold text-sm">TRAINERS IN ACTION</p>
               <p className="text-zinc-500 text-xs mt-0.5">Diamond Nine Athletics — Training Session</p>
             </div>
             <span className="badge-amber shrink-0">◆ FEATURED</span>
