@@ -112,7 +112,7 @@ export default function About() {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-4">
         <div className="text-center mb-8">
           <p className="section-label mb-3">SEE IT IN ACTION</p>
-          <h2 className="font-display text-4xl sm:text-5xl text-white">WATCH THE <span className="gradient-text">COACHES</span></h2>
+          <h2 className="font-display text-4xl sm:text-5xl text-white">WATCH THE <span className="gradient-text">TRAINERS</span></h2>
           <div className="divider-glow max-w-[100px] mx-auto mt-5" />
         </div>
 
