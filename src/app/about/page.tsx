@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { img } from "@/lib/config";
-import { IconBaseball, IconGlove, IconDiamond, IconChart, IconVideo } from "@/components/BaseballIcons";
+import { IconBaseball, IconGlove, IconDiamond } from "@/components/BaseballIcons";
 
 export const metadata: Metadata = {
   title: "About | Diamond Nine Athletics",
@@ -11,37 +11,20 @@ export const metadata: Metadata = {
 const coaches = [
   {
     name: "WES GAFFORD",
-    title: "HEAD PITCHING COACH",
+    title: "HEAD TRAINER",
     jersey: "1",
     bio: "Rapsodo-certified pitching specialist with a data-first approach to velocity and command development.",
     specialties: ["Rapsodo Analytics", "Velocity Development", "Arm Health", "Recruiting Prep"],
-    stats: [
-      { label: "ATHLETES", value: "300+" },
-      { label: "AVG GAIN", value: "+4 MPH" },
-    ],
     icon: <IconBaseball className="w-10 h-10 text-[#b07adf]" />,
-    pitchFocus: ["4-Seam", "Slider", "Curve"],
   },
   {
     name: "TURNER OLSON",
-    title: "PITCHING COACH",
+    title: "HITTING COACH",
     jersey: "9",
     bio: "Mechanical precision coach focused on repeatable delivery, command, and long-term arm longevity.",
     specialties: ["Mechanical Analysis", "Weighted Ball", "Live At-Bats", "Video Breakdown"],
-    stats: [
-      { label: "ATHLETES", value: "200+" },
-      { label: "AVG GAIN", value: "+5 MPH" },
-    ],
     icon: <IconGlove className="w-10 h-10 text-[#b07adf]" />,
-    pitchFocus: ["Sinker", "Changeup", "Cutter"],
   },
-];
-
-const pillars = [
-  { icon: <IconChart className="w-5 h-5 text-[#9954d2]" />, title: "DATA FIRST",     desc: "Every session logged with Rapsodo." },
-  { icon: <IconVideo className="w-5 h-5 text-[#9954d2]" />, title: "VIDEO",          desc: "Frame-by-frame mechanical breakdowns." },
-  { icon: <IconGlove className="w-5 h-5 text-[#9954d2]" />, title: "ARM LONGEVITY", desc: "Train hard. Protect your arm." },
-  { icon: <IconDiamond className="w-5 h-5 text-[#9954d2]" />, title: "RESULTS",     desc: "500+ athletes. Avg +4–6 mph gain." },
 ];
 
 export default function About() {
@@ -50,14 +33,14 @@ export default function About() {
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-allstar.jpg")}')` }} />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-stadium-vintage.jpg")}')` }} />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/60 to-zinc-950" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(153,84,210,0.07)_0%,transparent_100%)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <span className="badge-amber mb-5 inline-flex">◆ MEET THE TEAM</span>
           <h1 className="font-display leading-none">
             <span className="text-white text-6xl sm:text-8xl lg:text-9xl block">THE</span>
-            <span className="gradient-text text-glow text-6xl sm:text-8xl lg:text-9xl block">COACHES</span>
+            <span className="gradient-text text-glow text-6xl sm:text-8xl lg:text-9xl block">TRAINERS</span>
           </h1>
           <div className="divider-glow max-w-[100px] mx-auto mt-6 mb-4" />
           <p className="text-zinc-400 text-sm">Built on data. Defined by results.</p>
@@ -67,58 +50,61 @@ export default function About() {
       {/* ── Coach Cards ──────────────────────────────────────── */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {coaches.map((coach, i) => (
-            <div key={i} className="card-modern rounded-2xl overflow-hidden card-lift group">
-
-              {/* Photo panel */}
-              <div className="relative h-56 bg-gradient-to-br from-zinc-900 to-[#050202] overflow-hidden">
-                {/* Diagonal corner accent */}
-                <div className="coach-accent" />
-                {/* Grid */}
-                <div className="absolute inset-0 grid-bg opacity-15" />
-                {/* Jersey watermark */}
-                <div className="absolute right-3 top-1/2 -translate-y-1/2 font-display text-[8rem] leading-none text-white/[0.04] select-none pointer-events-none">
-                  #{coach.jersey}
+          {coaches.map((coach, i) => {
+            const card = (
+              <>
+                {/* Photo panel */}
+                <div className="relative h-56 bg-gradient-to-br from-zinc-900 to-[#050202] overflow-hidden">
+                  {/* Diagonal corner accent */}
+                  <div className="coach-accent" />
+                  {/* Grid */}
+                  <div className="absolute inset-0 grid-bg opacity-15" />
+                  {/* Jersey watermark */}
+                  <div className="absolute right-3 top-1/2 -translate-y-1/2 font-display text-[8rem] leading-none text-white/[0.04] select-none pointer-events-none">
+                    #{coach.jersey}
+                  </div>
+                  {/* Photo */}
+                  {i === 0 ? (
+                    <div className="absolute inset-0">
+                      <img src={img("/images/wes-gafford.jpg")} alt="Wes Gafford" className="w-full h-full object-cover object-top" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 to-transparent" />
+                    </div>
+                  ) : (
+                    <div className="absolute inset-0">
+                      <img src={img("/images/turner-olson.jpg")} alt="Turner Olson" className="w-full h-full object-cover object-top" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 to-transparent" />
+                    </div>
+                  )}
                 </div>
-                {/* Icon */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-2xl bg-[#9954d2]/8 border border-[#9954d2]/15 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {coach.icon}
+
+                {/* Info */}
+                <div className="p-5 sm:p-7">
+                  <p className="section-label mb-1">{coach.title}</p>
+                  <h2 className="font-display text-3xl text-white mb-3">{coach.name}</h2>
+                  <p className="text-zinc-400 text-sm leading-relaxed mb-5">{coach.bio}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {coach.specialties.map((s, j) => (
+                      <span key={j} className="text-[10px] text-[#9954d2]/70 bg-[#9954d2]/8 border border-[#9954d2]/15 px-3 py-1 rounded-full tracking-wide">{s}</span>
+                    ))}
                   </div>
                 </div>
-                {/* Stats row — fixed: no ml-auto, clean two-column layout */}
-                <div className="absolute bottom-0 left-0 right-0 px-4 py-3 bg-gradient-to-t from-zinc-950 to-transparent">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      {coach.stats.map((s, j) => (
-                        <div key={j} className="scoreboard-panel rounded-lg px-2.5 py-1.5">
-                          <p className="scoreboard-num text-sm">{s.value}</p>
-                          <p className="scoreboard-label text-[8px]">{s.label}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex flex-wrap justify-end gap-1 max-w-[50%]">
-                      {coach.pitchFocus.map((p, j) => (
-                        <span key={j} className={`pitch-tag ${j===0 ? "pitch-tag-fb" : j===1 ? "pitch-tag-sl" : "pitch-tag-cb"}`}>{p}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </>
+            );
 
-              {/* Info */}
-              <div className="p-5 sm:p-7">
-                <p className="section-label mb-1">{coach.title}</p>
-                <h2 className="font-display text-3xl text-white mb-3">{coach.name}</h2>
-                <p className="text-zinc-400 text-sm leading-relaxed mb-5">{coach.bio}</p>
-                <div className="flex flex-wrap gap-2">
-                  {coach.specialties.map((s, j) => (
-                    <span key={j} className="text-[10px] text-[#9954d2]/70 bg-[#9954d2]/8 border border-[#9954d2]/15 px-3 py-1 rounded-full tracking-wide">{s}</span>
-                  ))}
-                </div>
+            if (i === 0) {
+              return (
+                <Link key={i} href="/trainers/wes" className="card-modern rounded-2xl overflow-hidden card-lift group block">
+                  {card}
+                </Link>
+              );
+            }
+
+            return (
+              <div key={i} className="card-modern rounded-2xl overflow-hidden card-lift group">
+                {card}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -166,25 +152,6 @@ export default function About() {
               <p className="text-zinc-500 text-xs mt-0.5">Thrall — Completion Highlight</p>
             </div>
             <span className="pitch-tag pitch-tag-fb shrink-0">⚾ LIVE SESSION</span>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Pillars ──────────────────────────────────────────── */}
-      <section className="py-16 px-4 sm:px-6 bg-[#020101] border-t border-zinc-800/40">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="section-label mb-3">OUR APPROACH</p>
-            <h2 className="font-display text-4xl sm:text-5xl text-white">THE <span className="gradient-text">PHILOSOPHY</span></h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-            {pillars.map((p, i) => (
-              <div key={i} className="card-modern rounded-2xl p-5 sm:p-6 card-lift group text-center flex flex-col items-center">
-                <div className="icon-box mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 shrink-0">{p.icon}</div>
-                <h3 className="font-display text-base sm:text-lg text-white mb-2">{p.title}</h3>
-                <p className="text-zinc-600 text-[11px] leading-relaxed mt-auto">{p.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
