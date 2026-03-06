@@ -142,7 +142,7 @@ export default function Home() {
 
       {/* ══ TRAINING PLANS ════════════════════════════════════════ */}
       <section className="relative py-24 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-allstar.jpg")}')` }} />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-training.jpg")}')` }} />
         <div className="absolute inset-0 bg-zinc-950/82" />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-14">
