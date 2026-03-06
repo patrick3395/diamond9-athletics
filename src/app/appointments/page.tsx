@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 };
 
 const bookingSteps = [
-  { num: "01", title: "PICK A PLAN",  desc: "Choose from our pitching plans — Half Session to College Summer." },
-  { num: "02", title: "REACH OUT",   desc: "DM us on Instagram or send an email with your preferred dates." },
-  { num: "03", title: "SHOW UP",     desc: "Come ready to work. Bring your glove. We bring the Rapsodo." },
+  { num: "01", title: "PICK A PLAN",  desc: "Choose from our pitching or hitting plans — Half Session to College Summer." },
+  { num: "02", title: "BOOK ONLINE",  desc: "Select your date and time directly in the scheduler below. Instant confirmation." },
+  { num: "03", title: "SHOW UP",      desc: "Come ready to work. Bring your glove. We bring the Rapsodo." },
 ];
 
 const plans = [
@@ -64,35 +64,18 @@ export default function Appointments() {
       <section className="max-w-5xl mx-auto px-6 py-14 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-          {/* Booking CTA card */}
-          <div className="card-modern-amber rounded-2xl p-8 sm:p-10 relative overflow-hidden card-lift">
-            <div className="h-px bg-gradient-to-r from-transparent via-[#9954d2]/40 to-transparent absolute top-0 left-0 right-0" />
-            <div className="jersey-num absolute right-0 bottom-[-20px] text-[8rem] opacity-[0.05]">D9</div>
-            <div className="relative z-10">
-              <div className="w-14 h-14 rounded-2xl bg-[#9954d2]/10 border border-[#9954d2]/20 flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-[#b07adf]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                  <rect x="3" y="4" width="18" height="18" rx="3" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M16 2v4M8 2v4M3 10h18" strokeLinecap="round"/>
-                  <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" strokeWidth={2} strokeLinecap="round"/>
-                </svg>
-              </div>
-              <p className="section-label mb-2">READY TO TRAIN?</p>
-              <h2 className="font-display text-4xl text-white mb-3">BOOK YOUR SPOT</h2>
-              <p className="text-zinc-500 text-sm mb-7">Online booking coming soon. For now, reach out directly — we typically respond within 24 hours.</p>
-              <div className="flex flex-col gap-3">
-                <a
-                  href="https://instagram.com/diamond9athletics"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-gold py-4 rounded-full text-sm tracking-widest font-black text-center block"
-                >
-                  DM ON INSTAGRAM
-                </a>
-                <Link href="/contact" className="btn-outline py-4 rounded-full text-sm tracking-widest font-bold text-center block">
-                  SEND A MESSAGE
-                </Link>
-              </div>
-            </div>
+          {/* Acuity Scheduler embed */}
+          <div className="card-modern-amber rounded-2xl overflow-hidden relative card-lift">
+            <div className="h-px bg-gradient-to-r from-transparent via-[#9954d2]/40 to-transparent absolute top-0 left-0 right-0 z-10" />
+            <iframe
+              src="https://diamond9athletics.as.me/schedule.php?embedType=inline"
+              title="Book a Session"
+              width="100%"
+              height="700"
+              frameBorder="0"
+              className="w-full block"
+              style={{ minHeight: "700px" }}
+            />
           </div>
 
           {/* Info column */}
