@@ -47,8 +47,6 @@ export default function Navbar() {
                   <a
                     key={link.href}
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="text-sm font-medium tracking-wide transition-colors duration-200 text-zinc-400 hover:text-white"
                   >
                     {link.label}
@@ -123,8 +121,6 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                   className="block px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-colors text-zinc-400 hover:text-white hover:bg-zinc-800/50"
                 >
