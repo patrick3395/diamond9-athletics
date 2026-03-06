@@ -61,63 +61,61 @@ export default function Appointments() {
         </div>
       </section>
 
-      {/* ── Main Content ─────────────────────────────────────── */}
-      <section className="max-w-5xl mx-auto px-6 py-14 pb-24">
+      {/* ── Info Row ─────────────────────────────────────────── */}
+      <section className="max-w-7xl mx-auto px-6 pt-14 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          {/* Acuity Scheduler embed */}
-          <div className="card-modern-amber rounded-2xl overflow-hidden relative card-lift">
-            <div className="h-px bg-gradient-to-r from-transparent via-[#9954d2]/40 to-transparent absolute top-0 left-0 right-0 z-10" />
-            <iframe
-              src="https://app.acuityscheduling.com/schedule.php?owner=32061627&ref=embedded_csp"
-              title="Schedule Appointment"
-              width="100%"
-              height="800"
-              frameBorder="0"
-              allow="payment"
-              className="w-full block"
-            />
-            <Script src="https://embed.acuityscheduling.com/js/embed.js" strategy="lazyOnload" />
+          {/* Quick info */}
+          <div className="card-modern rounded-2xl p-6 space-y-4">
+            {[
+              { label: "RESPONSE TIME", value: "Within 24 hours",   icon: "⚡" },
+              { label: "LOCATION",      value: "Texas",              icon: "📍" },
+              { label: "INSTAGRAM",     value: "@diamond9athletics", icon: "📸" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-4">
+                <div className="icon-box text-lg flex-shrink-0">{item.icon}</div>
+                <div>
+                  <p className="text-zinc-600 text-[10px] tracking-widest mb-0.5">{item.label}</p>
+                  <p className="text-white text-sm">{item.value}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Info column */}
-          <div className="space-y-4">
-            {/* Quick info */}
-            <div className="card-modern rounded-2xl p-6 space-y-4">
-              {[
-                { label: "RESPONSE TIME", value: "Within 24 hours", icon: "⚡" },
-                { label: "LOCATION",      value: "Texas",            icon: "📍" },
-                { label: "INSTAGRAM",     value: "@diamond9athletics", icon: "📸" },
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4">
-                  <div className="icon-box text-lg flex-shrink-0">{item.icon}</div>
+          {/* Plan pricing mini-table */}
+          <div className="card-modern rounded-2xl p-6">
+            <p className="section-label mb-4">AVAILABLE PLANS</p>
+            <div className="space-y-2.5">
+              {plans.map((plan) => (
+                <div
+                  key={plan.name}
+                  className={`flex justify-between items-center py-1.5 px-2 rounded-lg transition-colors ${plan.featured ? "bg-[#9954d2]/8 border border-[#9954d2]/10" : "hover:bg-zinc-800/20"}`}
+                >
                   <div>
-                    <p className="text-zinc-600 text-[10px] tracking-widest mb-0.5">{item.label}</p>
-                    <p className="text-white text-sm">{item.value}</p>
+                    <span className="text-sm text-zinc-300">{plan.name}</span>
+                    <span className="ml-2 text-zinc-600 text-xs">{plan.sub}</span>
                   </div>
+                  <span className={`font-black font-display text-lg ${plan.featured ? "gradient-text" : "text-[#b07adf]"}`}>{plan.price}</span>
                 </div>
               ))}
             </div>
-
-            {/* Plan pricing mini-table */}
-            <div className="card-modern rounded-2xl p-6">
-              <p className="section-label mb-4">AVAILABLE PLANS</p>
-              <div className="space-y-2.5">
-                {plans.map((plan) => (
-                  <div
-                    key={plan.name}
-                    className={`flex justify-between items-center py-1.5 px-2 rounded-lg transition-colors ${plan.featured ? "bg-[#9954d2]/8 border border-[#9954d2]/10" : "hover:bg-zinc-800/20"}`}
-                  >
-                    <div>
-                      <span className="text-sm text-zinc-300">{plan.name}</span>
-                      <span className="ml-2 text-zinc-600 text-xs">{plan.sub}</span>
-                    </div>
-                    <span className={`font-black font-display text-lg ${plan.featured ? "gradient-text" : "text-[#b07adf]"}`}>{plan.price}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Acuity Scheduler ─────────────────────────────────── */}
+      <section className="w-full px-6 pb-24">
+        <div className="card-modern-amber rounded-2xl overflow-hidden relative">
+          <div className="h-px bg-gradient-to-r from-transparent via-[#9954d2]/40 to-transparent absolute top-0 left-0 right-0 z-10" />
+          <iframe
+            src="https://app.acuityscheduling.com/schedule.php?owner=32061627&ref=embedded_csp"
+            title="Schedule Appointment"
+            width="100%"
+            height="1000"
+            frameBorder="0"
+            allow="payment"
+            className="w-full block"
+          />
+          <Script src="https://embed.acuityscheduling.com/js/embed.js" strategy="lazyOnload" />
         </div>
       </section>
 
