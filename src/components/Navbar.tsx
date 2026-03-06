@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 import { img } from "@/lib/config";
 
-export const BUILD_VERSION = "v1.5.0";
+export const BUILD_VERSION = "v1.6.0";
 
 const navLinks = [
   { href: "/pitching-plans", label: "Pitching Plans" },
