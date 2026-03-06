@@ -29,7 +29,7 @@ const trainers = [
 
 export default function About() {
   return (
-    <main className="pt-36 bg-[#040200]">
+    <main className="pt-24 bg-[#040200]">
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative py-24 overflow-hidden">

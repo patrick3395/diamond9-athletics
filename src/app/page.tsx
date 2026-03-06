@@ -93,28 +93,29 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Hitting — COMING SOON */}
+            {/* Hitting — ACTIVE */}
             <Link href="/hitting-plans" className="group card-lift card-shine">
-              <div className="relative rounded-2xl overflow-hidden card-modern">
-                <div className="absolute inset-0 bg-gradient-to-br from-zinc-800/30 via-zinc-950/80 to-zinc-950" />
-                <div className="absolute right-0 bottom-0 font-display text-[120px] text-white/[0.03] leading-none select-none pointer-events-none">02</div>
+              <div className="relative rounded-2xl overflow-hidden card-modern-amber stripe-card">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#9954d2]/12 via-zinc-950/80 to-zinc-950" />
+                <div className="absolute right-0 bottom-0 font-display text-[120px] text-[#9954d2]/5 leading-none select-none pointer-events-none">02</div>
                 <div className="relative z-10 p-7 sm:p-10">
                   <div className="flex items-center gap-2 mb-5 flex-wrap">
-                    <span className="w-2 h-2 rounded-full bg-zinc-600 shrink-0" />
-                    <span className="text-[10px] text-zinc-500 font-bold tracking-[0.2em] shrink-0">COMING SOON</span>
-                    <IconBat className="w-5 h-5 text-zinc-500 shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-[#9954d2] animate-pulse shrink-0" />
+                    <span className="text-[10px] text-[#b07adf] font-bold tracking-[0.2em] shrink-0">ACTIVE</span>
+                    <IconBat className="w-5 h-5 text-[#b07adf] shrink-0" />
                     <span className="pitch-tag pitch-tag-ch">Launch Angle</span>
                     <span className="pitch-tag pitch-tag-fb">Exit Velo</span>
+                    <span className="pitch-tag pitch-tag-sl">Bat Speed</span>
                   </div>
                   <h3 className="font-display text-5xl sm:text-6xl text-white mb-1">HITTING</h3>
-                  <h3 className="font-display text-5xl sm:text-6xl text-zinc-600 leading-tight mb-4">PLANS</h3>
-                  <p className="text-zinc-600 text-sm mb-6">Get notified when programs launch in 2025</p>
-                  <span className="flex items-center gap-2 text-zinc-500 text-sm font-black tracking-wider">
-                    NOTIFY ME
+                  <h3 className="font-display text-5xl sm:text-6xl gradient-text leading-tight mb-4">PLANS</h3>
+                  <p className="text-zinc-400 text-sm mb-6">From $50 · Data-driven every session</p>
+                  <span className="flex items-center gap-2 text-[#b07adf] text-sm font-black tracking-wider">
+                    VIEW ALL PLANS
                     <svg className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
                   </span>
                 </div>
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{boxShadow:"inset 0 0 0 1px rgba(255,255,255,0.08)"}} />
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{boxShadow:"inset 0 0 0 1px rgba(153,84,210,0.4)"}} />
               </div>
             </Link>
           </div>

@@ -39,7 +39,7 @@ const goals = [
 
 export default function WesGaffordBio() {
   return (
-    <main className="pt-36 bg-[#040200]">
+    <main className="pt-24 bg-[#040200]">
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-pitcher-night.jpg")}')` }} />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/60 to-zinc-950" />

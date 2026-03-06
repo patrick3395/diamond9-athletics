@@ -7,7 +7,7 @@ const plans = ["Diamond Plan ($300)","Gold Plan ($275)","Single Session ($100)",
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   return (
-    <main className="pt-36 bg-[#040200]">
+    <main className="pt-24 bg-[#040200]">
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-contact.jpg")}')` }} />
