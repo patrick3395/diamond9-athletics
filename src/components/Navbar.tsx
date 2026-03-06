@@ -35,9 +35,7 @@ export default function Navbar() {
                 alt="Diamond Nine Athletics"
                 className="h-[144px] w-auto mix-blend-screen group-hover:opacity-90 transition-opacity duration-200"
               />
-              <span className="inline-block text-[10px] font-mono text-zinc-500 border border-zinc-800 rounded px-1.5 py-0.5 select-none">
-                {BUILD_VERSION}
-              </span>
+
             </Link>
 
             {/* Desktop Nav Links */}
