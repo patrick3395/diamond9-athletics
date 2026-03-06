@@ -23,7 +23,7 @@ const goals = [
   {
     num: "#1",
     title: "THROW HARDER",
-    desc: "Who doesn't like to throw hard? But how do we get there? Through Flexibility, Arm Speed, Scap Retraction, Rotational Velocity, and synced-up mechanics. Finding what your deficiency is — is key.",
+    desc: "Who doesn't like to throw hard? But how do we get there? Through Flexibility, Arm Speed, Scap Retraction, Rotational Velocity, and synced-up mechanics. Finding what your deficiency is the key.",
   },
   {
     num: "#2",
@@ -33,7 +33,7 @@ const goals = [
   {
     num: "#3",
     title: "THROW HEALTHIER",
-    desc: "When inexperienced pitchers try to throw harder, it can lead to injuries. Finding and correcting bio-mechanical issues puts your body in a better spot. Tommy John surgeries are on the rise — bad mechanics mixed with trying to throw harder are the reason.",
+    desc: "When inexperienced pitchers try to throw harder, it can lead to injuries. Finding and correcting bio-mechanical issues puts your body in a better spot. Tommy John surgeries are on the rise. Bad mechanics mixed with trying to throw harder are the reason.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function WesGaffordBio() {
             <p className="section-label mb-3">HEAD TRAINER</p>
             <h2 className="font-display text-4xl text-white mb-4">WES GAFFORD</h2>
             <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-              I strive for 3 main goals with every athlete I work with. My entire approach is built around helping you throw harder, longer, and healthier — using real mechanics, real data, and real feedback.
+              I strive for 3 main goals with every athlete I work with. My entire approach is built around helping you throw harder, longer, and healthier using real mechanics, real data, and real feedback.
             </p>
             <div className="flex flex-wrap gap-2">
               {["Arm Speed", "Scap Retraction", "Rotational Velocity", "Mechanics", "Arm Care", "Recruiting Prep"].map((s) => (

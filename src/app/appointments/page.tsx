@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const bookingSteps = [
-  { num: "01", title: "PICK A PLAN",  desc: "Choose from our pitching or hitting plans — Half Session to College Summer." },
+  { num: "01", title: "PICK A PLAN",  desc: "Choose from our pitching or hitting plans: Half Session to College Summer." },
   { num: "02", title: "BOOK ONLINE",  desc: "Select your date and time directly in the scheduler below. Instant confirmation." },
   { num: "03", title: "SHOW UP",      desc: "Come ready to work. Bring your glove. We bring the Rapsodo." },
 ];
