@@ -20,7 +20,7 @@ export default function HittingPlans() {
   return (
     <main className="pt-16 bg-[#040200]">
       <section className="relative min-h-[85vh] flex flex-col items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-fenway.jpg")}')` }} />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-vintage.jpg")}')` }} />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/85 via-zinc-950/70 to-zinc-950" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,rgba(153,84,210,0.06)_0%,transparent_100%)]" />
 
