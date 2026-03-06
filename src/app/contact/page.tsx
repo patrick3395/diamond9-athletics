@@ -10,7 +10,7 @@ export default function Contact() {
     <main className="pt-16 bg-[#040200]">
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-wrigley.jpg")}')` }} />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-contact.jpg")}')` }} />
         <div className="absolute inset-0 bg-zinc-950/60" />
         <div className="absolute inset-0 grid-bg opacity-10" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(153,84,210,0.06)_0%,transparent_100%)]" />
