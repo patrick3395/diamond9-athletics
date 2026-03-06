@@ -10,24 +10,14 @@ export const metadata: Metadata = {
 
 const plans = [
   {
-    name: "HALF",
-    tag: "QUICK HIT",
-    price: "$50",
-    sub: "30 min session",
-    features: ["30 Min Bullpen","Mechanical Breakdown","Arm Care"],
-    featured: false,
-    jersey: "½",
-    bar: 35,
-  },
-  {
-    name: "SINGLE",
-    tag: "ONE TIME",
-    price: "$100",
-    sub: "60 min session",
-    features: ["60 Min Bullpen","Rapsodo Tracking","Throwing Drills","Arm Care"],
-    featured: false,
-    jersey: "1",
-    bar: 55,
+    name: "DIAMOND",
+    tag: "MOST POPULAR",
+    price: "$300",
+    sub: "5 sessions",
+    features: ["5 Lessons","2 Recruiting Videos","Throwing Plan","Weighted Ball Training","Mobility Training","Rapsodo Tracking","Arm Care"],
+    featured: true,
+    jersey: "5",
+    bar: 100,
   },
   {
     name: "GOLD",
@@ -40,20 +30,30 @@ const plans = [
     bar: 78,
   },
   {
-    name: "DIAMOND",
-    tag: "MOST POPULAR",
-    price: "$300",
-    sub: "5 sessions",
-    features: ["5 Lessons","2 Recruiting Videos","Throwing Plan","Weighted Ball Training","Mobility Training","Rapsodo Tracking","Arm Care"],
-    featured: true,
-    jersey: "5",
-    bar: 100,
+    name: "SINGLE",
+    tag: "ONE TIME",
+    price: "$100",
+    sub: "60 min session",
+    features: ["60 Min Bullpen","Rapsodo Tracking","Throwing Drills","Arm Care"],
+    featured: false,
+    jersey: "1",
+    bar: 55,
+  },
+  {
+    name: "HALF",
+    tag: "QUICK HIT",
+    price: "$50",
+    sub: "30 min session",
+    features: ["30 Min Bullpen","Mechanical Breakdown","Arm Care"],
+    featured: false,
+    jersey: "½",
+    bar: 35,
   },
 ];
 
 export default function PitchingPlans() {
   return (
-    <main className="pt-16 bg-[#040200]">
+    <main className="pt-36 bg-[#040200]">
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative py-24 overflow-hidden">
@@ -71,21 +71,69 @@ export default function PitchingPlans() {
         </div>
       </section>
 
-      {/* ── Pitch Types Strip ────────────────────────────────── */}
-      <div className="bg-[#030200] border-y border-[#9954d2]/10 py-4">
-        <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-3 justify-center">
-          <span className="pitch-tag pitch-tag-fb">4-Seam Fastball</span>
-          <span className="pitch-tag pitch-tag-sl">Slider</span>
-          <span className="pitch-tag pitch-tag-cb">Curveball</span>
-          <span className="pitch-tag pitch-tag-ch">Changeup</span>
-          <span className="pitch-tag pitch-tag-fb">2-Seam / Sinker</span>
-          <span className="pitch-tag pitch-tag-sl">Cutter</span>
-          <span className="pitch-tag pitch-tag-cb">12-6 Curve</span>
+      {/* ── College Summer ───────────────────────────────────── */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className="relative card-modern-amber rounded-2xl overflow-hidden card-lift card-shine">
+          <div className="h-1 bg-gradient-to-r from-transparent via-[#9954d2] to-transparent" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#9954d2]/3 rounded-full blur-[80px]" />
+          <div className="jersey-num absolute right-8 bottom-0 text-[12rem] opacity-[0.03]">S</div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 relative z-10">
+            <div className="p-8 sm:p-12">
+              <span className="badge-amber mb-4 inline-flex"><IconField className="w-3 h-3" /> SUMMER PROGRAM</span>
+              <h2 className="font-display text-4xl sm:text-5xl text-white mt-3 mb-2">COLLEGE SUMMER</h2>
+              <p className="text-zinc-500 text-sm mb-4">The complete package. Everything a college pitcher needs for summer ball.</p>
+              <p className="gradient-text font-display text-7xl mb-2">$1,100</p>
+              <p className="text-zinc-600 text-xs mb-8">Full program · All-inclusive</p>
+              <Link href="/appointments" className="btn-gold px-10 py-4 rounded-full text-sm tracking-widest font-black inline-block">
+                ENROLL NOW
+              </Link>
+            </div>
+            <div className="p-8 sm:p-12 border-t lg:border-t-0 lg:border-l border-[#9954d2]/10 flex items-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                {["A/B/Recovery System","Long Toss Plan","Weekly Live At-Bats","Rapsodo Tracking","Bullpens with Feedback","Plyo Ball + Arm Care","Mobility Training","Video Capture","Workload Management"].map((feature) => (
+                  <div key={feature} className="flex items-center gap-2 text-zinc-300 text-sm">
+                    <svg className="w-3.5 h-3.5 text-[#9954d2] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+                    {feature}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* ── High School Summer ──────────────────────────────── */}
+      <section className="max-w-7xl mx-auto px-6 pb-6">
+        <div className="relative card-modern rounded-2xl overflow-hidden card-lift card-shine">
+          <div className="h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent" />
+          <div className="jersey-num absolute right-8 bottom-0 text-[12rem] opacity-[0.03]">HS</div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 relative z-10">
+            <div className="p-8 sm:p-12">
+              <span className="badge-amber mb-4 inline-flex">⚾ PREP PROGRAM</span>
+              <h2 className="font-display text-4xl sm:text-5xl text-white mt-3 mb-2">HIGH SCHOOL SUMMER</h2>
+              <p className="text-zinc-500 text-sm mb-4">Everything a high school pitcher needs to develop and get recruited.</p>
+              <p className="gradient-text font-display text-7xl mb-2">$850</p>
+              <p className="text-zinc-600 text-xs mb-8">Full program · All-inclusive</p>
+              <Link href="/appointments" className="btn-gold px-10 py-4 rounded-full text-sm tracking-widest font-black inline-block">
+                ENROLL NOW
+              </Link>
+            </div>
+            <div className="p-8 sm:p-12 border-t lg:border-t-0 lg:border-l border-zinc-800/40 flex items-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                {["Rapsodo Feedback","Mechanical Analysis","Arm Care Protocol","Video Breakdown","Weighted Ball","Recruiting Prep","Throwing Plan","Mobility Training"].map((feature) => (
+                  <div key={feature} className="flex items-center gap-2 text-zinc-300 text-sm">
+                    <svg className="w-3.5 h-3.5 text-[#9954d2] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+                    {feature}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ── Plans Grid ───────────────────────────────────────── */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section className="max-w-7xl mx-auto px-6 pb-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 items-end">
           {plans.map((plan) => (
             <div
@@ -139,44 +187,6 @@ export default function PitchingPlans() {
             </div>
           ))}
         </div>
-      </section>
-
-      {/* ── College Summer ───────────────────────────────────── */}
-      <section className="max-w-7xl mx-auto px-6 pb-16">
-        <div className="relative card-modern-amber rounded-2xl overflow-hidden card-lift card-shine">
-          <div className="h-1 bg-gradient-to-r from-transparent via-[#9954d2] to-transparent" />
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#9954d2]/3 rounded-full blur-[80px]" />
-          <div className="jersey-num absolute right-8 bottom-0 text-[12rem] opacity-[0.03]">S</div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 relative z-10">
-            <div className="p-8 sm:p-12">
-              <span className="badge-amber mb-4 inline-flex"><IconField className="w-3 h-3" /> SUMMER PROGRAM</span>
-              <h2 className="font-display text-4xl sm:text-5xl text-white mt-3 mb-2">COLLEGE SUMMER</h2>
-              <p className="text-zinc-500 text-sm mb-4">The complete package. Everything a college pitcher needs for summer ball.</p>
-              <p className="gradient-text font-display text-7xl mb-2">$1,100</p>
-              <p className="text-zinc-600 text-xs mb-8">Full program · All-inclusive</p>
-              <Link href="/appointments" className="btn-gold px-10 py-4 rounded-full text-sm tracking-widest font-black inline-block">
-                ENROLL NOW
-              </Link>
-            </div>
-            <div className="p-8 sm:p-12 border-t lg:border-t-0 lg:border-l border-[#9954d2]/10 flex items-center">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-                {["A/B/Recovery System","Long Toss Plan","Weekly Live At-Bats","Rapsodo Tracking","Bullpens with Feedback","Plyo Ball + Arm Care","Mobility Training","Video Capture","Workload Management"].map((feature) => (
-                  <div key={feature} className="flex items-center gap-2 text-zinc-300 text-sm">
-                    <svg className="w-3.5 h-3.5 text-[#9954d2] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
-                    {feature}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA ─────────────────────────────────────────────── */}
-      <section className="py-16 text-center px-6 border-t border-zinc-800/40 bg-[#020101]">
-        <p className="font-display text-3xl text-white mb-2">NOT SURE WHICH PLAN?</p>
-        <p className="text-zinc-500 text-sm mb-7">Reach out — we&apos;ll help you pick the right one.</p>
-        <Link href="/contact" className="btn-outline px-8 py-3.5 rounded-full text-sm tracking-widest inline-block">CONTACT US</Link>
       </section>
 
     </main>

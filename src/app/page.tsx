@@ -1,63 +1,6 @@
 import Link from "next/link";
 import { img } from "@/lib/config";
-import { IconBaseball, IconGlove, IconBat, IconChart, IconVideo, IconTrophy, IconDiamond } from "@/components/BaseballIcons";
-
-const marqueeItems = [
-  "⚾ RAPSODO TRACKING",
-  "◆ ELITE COACHING",
-  "⚾ ARM CARE PROTOCOLS",
-  "◆ VIDEO ANALYSIS",
-  "⚾ VELOCITY DEVELOPMENT",
-  "◆ RECRUITING VIDEOS",
-  "⚾ LIVE AT-BATS",
-  "◆ WEIGHTED BALL PROGRAMS",
-  "⚾ RAPSODO TRACKING",
-  "◆ ELITE COACHING",
-  "⚾ ARM CARE PROTOCOLS",
-  "◆ VIDEO ANALYSIS",
-  "⚾ VELOCITY DEVELOPMENT",
-  "◆ RECRUITING VIDEOS",
-  "⚾ LIVE AT-BATS",
-  "◆ WEIGHTED BALL PROGRAMS",
-];
-
-const stats = [
-  { num: "500+",  label: "ATHLETES TRAINED" },
-  { num: "+4–6",  label: "AVG MPH GAIN"     },
-  { num: "2",     label: "ELITE COACHES"    },
-  { num: "100%",  label: "DATA DRIVEN"      },
-];
-
-const features = [
-  {
-    title: "Rapsodo Analytics",
-    desc: "Velocity, spin rate, break, and ball flight — every pitch measured in real time.",
-    icon: <IconChart className="w-6 h-6 text-[#9954d2]" />,
-    pitchTags: ["4-Seam", "Slider", "Curveball", "Changeup"],
-    bar: 92,
-  },
-  {
-    title: "Video Breakdown",
-    desc: "Frame-by-frame mechanical analysis. See what's holding you back.",
-    icon: <IconVideo className="w-6 h-6 text-[#9954d2]" />,
-    pitchTags: [],
-    bar: 88,
-  },
-  {
-    title: "Arm Care Protocol",
-    desc: "Longevity-first programming so you throw harder, longer.",
-    icon: <IconGlove className="w-6 h-6 text-[#9954d2]" />,
-    pitchTags: [],
-    bar: 95,
-  },
-  {
-    title: "Proven Results",
-    desc: "500+ athletes. Real data. Real improvement every session.",
-    icon: <IconTrophy className="w-6 h-6 text-[#9954d2]" />,
-    pitchTags: [],
-    bar: 100,
-  },
-];
+import { IconBaseball, IconBat, IconDiamond } from "@/components/BaseballIcons";
 
 const steps = [
   { num: "01", title: "CHOOSE A PLAN", desc: "Pick from Half Session to the full College Summer program." },
@@ -87,16 +30,14 @@ export default function Home() {
         </svg>
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <div className="animate-fade-in-up mb-6">
-            <span className="badge-amber">◆ DIAMOND NINE ATHLETICS</span>
-          </div>
+          <p className="animate-fade-in-up text-zinc-400 text-sm sm:text-base tracking-[0.3em] uppercase mb-4">Elevate Your Game</p>
           <h1 className="font-display leading-none mb-6">
-            <span className="animate-fade-in-up block text-5xl sm:text-8xl lg:text-[10rem] gradient-text-white">ELEVATE</span>
+            <span className="animate-fade-in-up block text-5xl sm:text-8xl lg:text-[10rem] gradient-text-white">DIAMOND 9</span>
             <div className="divider-glow max-w-[80px] mx-auto my-2 animate-fade-in-up-delay" />
-            <span className="animate-fade-in-up-delay block text-5xl sm:text-8xl lg:text-[10rem] gradient-text text-glow">YOUR GAME</span>
+            <span className="animate-fade-in-up-delay block text-5xl sm:text-8xl lg:text-[10rem] gradient-text text-glow">ATHLETICS</span>
           </h1>
           <p className="animate-fade-in-up-delay-2 text-zinc-400 text-base sm:text-lg mb-10">
-            Rapsodo-powered pitching training. Real data. Real results.
+            Real data. Real results.
           </p>
           <div className="animate-fade-in-up-delay-3 flex flex-row gap-3 justify-center flex-wrap">
             <Link href="/appointments" className="btn-gold animate-pulse-glow px-8 py-4 text-sm rounded-full inline-block font-black tracking-widest">
@@ -113,32 +54,6 @@ export default function Home() {
           <div className="w-px h-10 bg-gradient-to-b from-[#9954d2]/30 to-transparent" />
         </div>
       </section>
-
-      {/* ══ SCOREBOARD STATS ══════════════════════════════════════ */}
-      <div className="scoreboard-panel py-8">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#9954d2]/10">
-            {stats.map((s, i) => (
-              <div key={i} className="px-6 py-4 text-center">
-                <div className="stat-accent mx-auto" />
-                <p className="scoreboard-num text-4xl sm:text-5xl">{s.num}</p>
-                <p className="scoreboard-label mt-2">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ══ LED MARQUEE ═══════════════════════════════════════════ */}
-      <div className="marquee-led py-3 overflow-hidden relative">
-        <div className="marquee-container">
-          <div className="animate-marquee flex items-center">
-            {marqueeItems.map((item, i) => (
-              <span key={i} className="inline-block px-6 marquee-led-text">{item}</span>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* ══ TRAINING PLANS ════════════════════════════════════════ */}
       <section className="relative py-24 px-6 overflow-hidden">
@@ -230,44 +145,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ THE DIAMOND DIFFERENCE ════════════════════════════════ */}
-      <section className="relative py-24 px-6 bg-[#050202]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-14 items-start">
-            <div>
-              <p className="section-label mb-4">WHY CHOOSE US</p>
-              <h2 className="font-display text-5xl sm:text-6xl leading-none mb-5">
-                <span className="text-white">THE DIAMOND</span>
-                <span className="block gradient-text">DIFFERENCE</span>
-              </h2>
-              <p className="text-zinc-500 text-sm mb-8 max-w-xs">Elite tech. Elite coaches. Every session tracked, analyzed, and used to push you further.</p>
-              <Link href="/about" className="btn-outline px-8 py-3 text-sm rounded-full inline-block tracking-widest">MEET THE COACHES</Link>
-            </div>
-            <div className="grid grid-cols-1 gap-4">
-              {features.map((f, i) => (
-                <div key={i} className="card-modern rounded-2xl p-6 card-lift group flex items-start gap-5">
-                  <div className="icon-box flex-shrink-0 group-hover:scale-110 transition-transform duration-300">{f.icon}</div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-white font-bold text-sm mb-1">{f.title}</h3>
-                    {f.pitchTags.length > 0 && (
-                      <div className="flex gap-1 flex-wrap mb-2">
-                        {f.pitchTags.map((tag, t) => (
-                          <span key={t} className={`pitch-tag ${t===0?"pitch-tag-fb":t===1?"pitch-tag-sl":t===2?"pitch-tag-cb":"pitch-tag-ch"}`}>{tag}</span>
-                        ))}
-                      </div>
-                    )}
-                    <p className="text-zinc-600 text-xs mb-3 leading-relaxed">{f.desc}</p>
-                    <div className="velocity-bar-track">
-                      <div className="velocity-bar-fill" style={{ width: `${f.bar}%` }} />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ══ SUMMER TRAINING ═══════════════════════════════════════ */}
       <section className="relative py-24 px-6 bg-[#040200]">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#9954d2]/30 to-transparent" />
@@ -298,9 +175,15 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Link href="/pitching-plans" className="btn-gold px-10 py-4 rounded-full text-sm tracking-widest font-black inline-block">
-                  ENROLL NOW
-                </Link>
+                <div className="flex flex-wrap gap-3">
+                  <Link href="/pitching-plans" className="btn-gold px-10 py-4 rounded-full text-sm tracking-widest font-black inline-block">
+                    ENROLL NOW
+                  </Link>
+                  <a href={img("/downloads/summer-college-flyer.pdf")} download className="btn-outline px-8 py-4 rounded-full text-sm tracking-widest font-bold inline-flex items-center gap-2">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                    GET THE FLYER
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -310,10 +193,10 @@ export default function Home() {
               <div className="p-8 sm:p-10 relative overflow-hidden">
                 <div className="jersey-num absolute right-2 bottom-0 text-[8rem] opacity-[0.04]">HS</div>
                 <span className="badge-amber mb-5 inline-flex">⚾ PREP PROGRAM</span>
-                <h2 className="font-display text-4xl sm:text-5xl text-white mb-1">HIGH SCHOOL</h2>
+                <h2 className="font-display text-4xl sm:text-5xl text-white mb-1">HIGH SCHOOL SUMMER</h2>
                 <div className="flex items-baseline gap-2 mb-7">
-                  <span className="font-display text-6xl gradient-text">$50</span>
-                  <span className="text-zinc-600 text-sm">/ session — up to $300</span>
+                  <span className="font-display text-6xl gradient-text">$850</span>
+                  <span className="text-zinc-600 text-sm">/ full program</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2.5 mb-8">
                   {["Rapsodo Feedback","Mechanical Analysis","Arm Care Protocol","Video Breakdown","Weighted Ball","Recruiting Prep"].map((feature) => (
@@ -323,9 +206,7 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Link href="/pitching-plans" className="btn-outline px-10 py-4 rounded-full text-sm tracking-widest font-bold inline-block">
-                  VIEW PLANS
-                </Link>
+                <Link href="/appointments" className="btn-gold px-10 py-4 rounded-full text-sm tracking-widest font-black inline-block">ENROLL NOW</Link>
               </div>
             </div>
 
@@ -333,31 +214,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ FINAL CTA ═════════════════════════════════════════════ */}
-      <section className="relative py-32 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/batting-cages.jpg")}')` }} />
-        <div className="absolute inset-0 bg-zinc-950/87" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_50%,rgba(153,84,210,0.08)_0%,transparent_100%)]" />
-        <svg className="absolute top-0 left-0 right-0 w-full opacity-10 pointer-events-none" height="60" viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
-          <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30" stroke="#9954d2" strokeWidth="1" fill="none" strokeDasharray="6 6"/>
-        </svg>
-        <div className="relative max-w-2xl mx-auto text-center">
-          <p className="section-label mb-5">DON&apos;T WAIT</p>
-          <h2 className="font-display text-6xl sm:text-8xl lg:text-9xl leading-none mb-4">
-            <span className="text-white">READY TO</span>
-            <span className="block gradient-text text-glow">START?</span>
-          </h2>
-          <p className="text-zinc-400 text-sm mb-10">Every session is tracked. Every rep counts.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/appointments" className="btn-gold animate-pulse-glow px-12 py-5 text-sm rounded-full inline-block font-black tracking-widest">
-              BOOK YOUR SESSION
-            </Link>
-            <Link href="/pitching-plans" className="btn-outline px-12 py-5 text-sm rounded-full inline-block tracking-widest">
-              SEE PLANS
-            </Link>
-          </div>
-        </div>
-      </section>
 
     </main>
   );

@@ -7,7 +7,7 @@ const plans = ["Diamond Plan ($300)","Gold Plan ($275)","Single Session ($100)",
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   return (
-    <main className="pt-16 bg-[#040200]">
+    <main className="pt-36 bg-[#040200]">
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${img("/images/hero-contact.jpg")}')` }} />
@@ -75,9 +75,9 @@ export default function Contact() {
           <div className="lg:col-span-2 space-y-4">
             <div className="card-modern rounded-2xl p-6 space-y-5">
               {[
-                { label: "INSTAGRAM", value: "@diamond9athletics", icon: "📸" },
-                { label: "EMAIL", value: "info@diamond9athletics.com", icon: "✉️" },
-                { label: "LOCATION", value: "Texas", icon: "📍" },
+                { label: "INSTAGRAM", value: "@Diamond9atx", icon: "📸" },
+                { label: "EMAIL", value: "Diamondnineathletics@gmail.com", icon: "✉️" },
+                { label: "LOCATION", value: "Austin, Texas", icon: "📍" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="icon-box text-lg">{item.icon}</div>
