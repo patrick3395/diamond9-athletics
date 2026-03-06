@@ -11,7 +11,7 @@ export const BUILD_VERSION = "v1.6.0";
 const navLinks = [
   { href: "/pitching-plans", label: "Pitching Plans" },
   { href: "/hitting-plans", label: "Hitting Plans" },
-  { href: "/shop", label: "Shop" },
+  { href: "https://www.diamond9athletics.com/shop-1", label: "Shop", external: true },
   { href: "/contact", label: "Contact" },
   { href: "/about", label: "About" },
 ];
@@ -43,17 +43,29 @@ export default function Navbar() {
             {/* Desktop Nav Links */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
-                    pathname === link.href
-                      ? "text-[#b07adf]"
-                      : "text-zinc-400 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                </Link>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium tracking-wide transition-colors duration-200 text-zinc-400 hover:text-white"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+                      pathname === link.href
+                        ? "text-[#b07adf]"
+                        : "text-zinc-400 hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </div>
 
@@ -107,18 +119,31 @@ export default function Navbar() {
               <ThemeToggle />
             </div>
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-colors ${
-                  pathname === link.href
-                    ? "text-[#b07adf] bg-[#9954d2]/5"
-                    : "text-zinc-400 hover:text-white hover:bg-zinc-800/50"
-                }`}
-              >
-                {link.label}
-              </Link>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-colors text-zinc-400 hover:text-white hover:bg-zinc-800/50"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-colors ${
+                    pathname === link.href
+                      ? "text-[#b07adf] bg-[#9954d2]/5"
+                      : "text-zinc-400 hover:text-white hover:bg-zinc-800/50"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             <Link
               href="/appointments"
