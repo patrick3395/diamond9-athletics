@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { img } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -68,14 +69,15 @@ export default function Appointments() {
           <div className="card-modern-amber rounded-2xl overflow-hidden relative card-lift">
             <div className="h-px bg-gradient-to-r from-transparent via-[#9954d2]/40 to-transparent absolute top-0 left-0 right-0 z-10" />
             <iframe
-              src="https://diamond9athletics.as.me/schedule.php?embedType=inline"
-              title="Book a Session"
+              src="https://app.acuityscheduling.com/schedule.php?owner=32061627&ref=embedded_csp"
+              title="Schedule Appointment"
               width="100%"
-              height="700"
+              height="800"
               frameBorder="0"
+              allow="payment"
               className="w-full block"
-              style={{ minHeight: "700px" }}
             />
+            <Script src="https://embed.acuityscheduling.com/js/embed.js" strategy="lazyOnload" />
           </div>
 
           {/* Info column */}
