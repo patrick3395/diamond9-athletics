@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { img } from "@/lib/config";
 
+const STORE_URL = "https://www.diamond9athletics.com/shop-1";
+
 export const metadata: Metadata = {
   title: "Shop | Diamond Nine Athletics",
   description: "Official Diamond Nine Athletics merchandise.",
@@ -53,7 +55,7 @@ export default function Shop() {
       <section className="max-w-7xl mx-auto px-6 py-12 pb-24">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {products.map((product, i) => (
-            <div key={i} className="card-modern rounded-2xl overflow-hidden card-lift card-shine group cursor-pointer">
+            <a key={i} href={STORE_URL} target="_blank" rel="noopener noreferrer" className="card-modern rounded-2xl overflow-hidden card-lift card-shine group cursor-pointer">
               {/* Product visual */}
               <div className="relative aspect-[4/3] flex items-center justify-center overflow-hidden bg-gradient-to-br from-zinc-900 to-[#050202]">
                 <div className="absolute inset-0 grid-bg opacity-10" />
@@ -87,10 +89,10 @@ export default function Shop() {
                 <h3 className="text-white font-semibold text-sm mb-0.5">{product.name}</h3>
                 <div className="flex items-center justify-between mt-3">
                   <span className="gradient-text font-black font-display text-2xl">{product.price}</span>
-                  <button className="btn-outline text-xs px-4 py-2 rounded-full">ADD</button>
+                  <span className="btn-outline text-xs px-4 py-2 rounded-full">SHOP →</span>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -106,8 +108,8 @@ export default function Shop() {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-zinc-500 text-sm mb-5">Want early access to drops?</p>
-          <Link href="/contact" className="btn-outline px-8 py-3.5 rounded-full text-sm tracking-widest inline-block">JOIN THE LIST</Link>
+          <p className="text-zinc-500 text-sm mb-5">Browse the full store on our official shop.</p>
+          <a href={STORE_URL} target="_blank" rel="noopener noreferrer" className="btn-gold px-8 py-3.5 rounded-full text-sm tracking-widest inline-block">VISIT FULL STORE →</a>
         </div>
       </section>
 
