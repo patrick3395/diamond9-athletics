@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { img } from "@/lib/config";
 
-const STORE_URL = "https://www.diamond9athletics.com/shop-1";
+const STORE_URL = "https://shop.flyp.space/diamond9ath";
 
 export const metadata: Metadata = {
   title: "Shop | Diamond Nine Athletics",

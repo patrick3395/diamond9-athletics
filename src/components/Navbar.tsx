@@ -11,7 +11,7 @@ export const BUILD_VERSION = "v1.6.0";
 const navLinks = [
   { href: "/pitching-plans", label: "Pitching Plans" },
   { href: "/hitting-plans", label: "Hitting Plans" },
-  { href: "https://www.diamond9athletics.com/shop-1", label: "Shop", external: true },
+  { href: "https://shop.flyp.space/diamond9ath", label: "Shop", external: true },
   { href: "/contact", label: "Contact" },
   { href: "/about", label: "About" },
 ];
